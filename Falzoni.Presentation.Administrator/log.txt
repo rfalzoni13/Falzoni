@@ -1,0 +1,101 @@
+2024-04-23 13:13:48.7993|FATAL|Falzoni.Presentation.Administrator.Controllers.AccountController|6|Ocorreu um erro: System.InvalidOperationException: Um URI de solicitação inválido foi fornecida. O URI de solicitação deve ser um URI absoluto ou o BaseAddress deve ser definido.
+   em System.Net.Http.HttpClient.PrepareRequestMessage(HttpRequestMessage request)
+   em System.Net.Http.HttpClient.SendAsync(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationToken cancellationToken)
+   em System.Net.Http.HttpClient.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   em System.Net.Http.HttpClient.PostAsync(Uri requestUri, HttpContent content, CancellationToken cancellationToken)
+   em System.Net.Http.HttpClient.PostAsync(String requestUri, HttpContent content)
+   em Falzoni.Presentation.Administrator.Clients.Identity.AccountClient.<Login>d__0.MoveNext() na F:\Users\Renato Falzoni\Documents\Pessoal\Projetos\Falzoni\Falzoni.Presentation.Administrator\Clients\Identity\AccountClient.cs:linha 35
+--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---
+   em System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   em Falzoni.Presentation.Administrator.Controllers.AccountController.<Login>d__5.MoveNext() na F:\Users\Renato Falzoni\Documents\Pessoal\Projetos\Falzoni\Falzoni.Presentation.Administrator\Controllers\AccountController.cs:linha 53|
+2024-04-23 13:17:14.4975|FATAL|Falzoni.Presentation.Administrator.Controllers.AccountController|6|Ocorreu um erro: System.Net.Http.HttpRequestException: Ocorreu um erro ao enviar a solicitação. ---> System.Net.WebException: Impossível conectar-se ao servidor remoto ---> System.Net.Sockets.SocketException: Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente 127.0.0.1:44301
+   em System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   em System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   em System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- Fim do rastreamento de pilha de exceções internas ---
+   em System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   em System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+   --- Fim do rastreamento de pilha de exceções internas ---
+   em System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   em Falzoni.Presentation.Administrator.Clients.Identity.AccountClient.<Login>d__0.MoveNext() na F:\Users\Renato Falzoni\Documents\Pessoal\Projetos\Falzoni\Falzoni.Presentation.Administrator\Clients\Identity\AccountClient.cs:linha 35
+--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---
+   em System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   em Falzoni.Presentation.Administrator.Controllers.AccountController.<Login>d__5.MoveNext() na F:\Users\Renato Falzoni\Documents\Pessoal\Projetos\Falzoni\Falzoni.Presentation.Administrator\Controllers\AccountController.cs:linha 53|
+2024-04-23 13:19:54.2373|FATAL|Falzoni.Presentation.Administrator.Controllers.AccountController|6|Ocorreu um erro: System.Net.Http.HttpRequestException: Ocorreu um erro ao enviar a solicitação. ---> System.Net.WebException: Impossível conectar-se ao servidor remoto ---> System.Net.Sockets.SocketException: Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente 127.0.0.1:44301
+   em System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   em System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   em System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- Fim do rastreamento de pilha de exceções internas ---
+   em System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   em System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+   --- Fim do rastreamento de pilha de exceções internas ---
+   em System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   em Falzoni.Presentation.Administrator.Clients.Identity.AccountClient.<Login>d__0.MoveNext() na F:\Users\Renato Falzoni\Documents\Pessoal\Projetos\Falzoni\Falzoni.Presentation.Administrator\Clients\Identity\AccountClient.cs:linha 35
+--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---
+   em System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   em Falzoni.Presentation.Administrator.Controllers.AccountController.<Login>d__5.MoveNext() na F:\Users\Renato Falzoni\Documents\Pessoal\Projetos\Falzoni\Falzoni.Presentation.Administrator\Controllers\AccountController.cs:linha 53|
+2024-04-23 13:38:12.1751|FATAL|Falzoni.Presentation.Administrator.Controllers.AccountController|6|Erro fatal!|System.Exception: Não foram encontrados recursos HTTP que correspondam ao URI de solicitação 'https://localhost:44367/Api/Account/Logout'.
+   em Falzoni.Presentation.Administrator.Clients.Identity.AccountClient.<Logout>d__2.MoveNext() na F:\Users\Renato Falzoni\Documents\Pessoal\Projetos\Falzoni\Falzoni.Presentation.Administrator\Clients\Identity\AccountClient.cs:linha 139
+--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---
+   em System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   em Falzoni.Presentation.Administrator.Controllers.AccountController.<LogOut>d__6.MoveNext() na F:\Users\Renato Falzoni\Documents\Pessoal\Projetos\Falzoni\Falzoni.Presentation.Administrator\Controllers\AccountController.cs:linha 90
+2024-04-23 13:39:26.0485|FATAL|Falzoni.Presentation.Administrator.Controllers.AccountController|8|Erro fatal!|System.Exception: Não foram encontrados recursos HTTP que correspondam ao URI de solicitação 'https://localhost:44367/Api/Account/Logout'.
+   em Falzoni.Presentation.Administrator.Clients.Identity.AccountClient.<Logout>d__2.MoveNext() na F:\Users\Renato Falzoni\Documents\Pessoal\Projetos\Falzoni\Falzoni.Presentation.Administrator\Clients\Identity\AccountClient.cs:linha 139
+--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---
+   em System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   em Falzoni.Presentation.Administrator.Controllers.AccountController.<LogOut>d__6.MoveNext() na F:\Users\Renato Falzoni\Documents\Pessoal\Projetos\Falzoni\Falzoni.Presentation.Administrator\Controllers\AccountController.cs:linha 90
+2024-04-23 13:40:21.2598|FATAL|Falzoni.Presentation.Administrator.Controllers.AccountController|9|Erro fatal!|System.Exception: Não foram encontrados recursos HTTP que correspondam ao URI de solicitação 'https://localhost:44367/Api/Account/Logout'.
+   em Falzoni.Presentation.Administrator.Clients.Identity.AccountClient.<Logout>d__2.MoveNext() na F:\Users\Renato Falzoni\Documents\Pessoal\Projetos\Falzoni\Falzoni.Presentation.Administrator\Clients\Identity\AccountClient.cs:linha 139
+--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---
+   em System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   em Falzoni.Presentation.Administrator.Controllers.AccountController.<LogOut>d__6.MoveNext() na F:\Users\Renato Falzoni\Documents\Pessoal\Projetos\Falzoni\Falzoni.Presentation.Administrator\Controllers\AccountController.cs:linha 90
+2024-04-23 13:40:42.1364|FATAL|Falzoni.Presentation.Administrator.Controllers.AccountController|7|Erro fatal!|System.Exception: Não foram encontrados recursos HTTP que correspondam ao URI de solicitação 'https://localhost:44367/Api/Account/Logout'.
+   em Falzoni.Presentation.Administrator.Clients.Identity.AccountClient.<Logout>d__2.MoveNext() na F:\Users\Renato Falzoni\Documents\Pessoal\Projetos\Falzoni\Falzoni.Presentation.Administrator\Clients\Identity\AccountClient.cs:linha 139
+--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---
+   em System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   em Falzoni.Presentation.Administrator.Controllers.AccountController.<LogOut>d__6.MoveNext() na F:\Users\Renato Falzoni\Documents\Pessoal\Projetos\Falzoni\Falzoni.Presentation.Administrator\Controllers\AccountController.cs:linha 90
+2024-04-23 13:41:13.6646|FATAL|Falzoni.Presentation.Administrator.Controllers.AccountController|9|Erro fatal!|System.Exception: Não foram encontrados recursos HTTP que correspondam ao URI de solicitação 'https://localhost:44367/Api/Account/Logout'.
+   em Falzoni.Presentation.Administrator.Clients.Identity.AccountClient.<Logout>d__2.MoveNext() na F:\Users\Renato Falzoni\Documents\Pessoal\Projetos\Falzoni\Falzoni.Presentation.Administrator\Clients\Identity\AccountClient.cs:linha 139
+--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---
+   em System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   em Falzoni.Presentation.Administrator.Controllers.AccountController.<LogOut>d__6.MoveNext() na F:\Users\Renato Falzoni\Documents\Pessoal\Projetos\Falzoni\Falzoni.Presentation.Administrator\Controllers\AccountController.cs:linha 90
+2024-04-23 13:41:49.2059|FATAL|Falzoni.Presentation.Administrator.Controllers.AccountController|6|Erro fatal!|System.Exception: Não foram encontrados recursos HTTP que correspondam ao URI de solicitação 'https://localhost:44367/Api/Account/Logout'.
+   em Falzoni.Presentation.Administrator.Clients.Identity.AccountClient.<Logout>d__2.MoveNext() na F:\Users\Renato Falzoni\Documents\Pessoal\Projetos\Falzoni\Falzoni.Presentation.Administrator\Clients\Identity\AccountClient.cs:linha 139
+--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---
+   em System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   em Falzoni.Presentation.Administrator.Controllers.AccountController.<LogOut>d__6.MoveNext() na F:\Users\Renato Falzoni\Documents\Pessoal\Projetos\Falzoni\Falzoni.Presentation.Administrator\Controllers\AccountController.cs:linha 90
+2024-04-23 13:43:22.9171|FATAL|Falzoni.Presentation.Administrator.Controllers.AccountController|8|Erro fatal!|System.Exception: Não foram encontrados recursos HTTP que correspondam ao URI de solicitação 'https://localhost:44367/Api/Account/Logout'.
+   em Falzoni.Presentation.Administrator.Clients.Identity.AccountClient.<Logout>d__2.MoveNext() na F:\Users\Renato Falzoni\Documents\Pessoal\Projetos\Falzoni\Falzoni.Presentation.Administrator\Clients\Identity\AccountClient.cs:linha 139
+--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---
+   em System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   em Falzoni.Presentation.Administrator.Controllers.AccountController.<LogOut>d__6.MoveNext() na F:\Users\Renato Falzoni\Documents\Pessoal\Projetos\Falzoni\Falzoni.Presentation.Administrator\Controllers\AccountController.cs:linha 90
+2024-04-23 18:13:22.7443|ERROR|Falzoni.Presentation.Administrator.Areas.Register.Controllers.UserController|7|Ocorreu um erro: System.ApplicationException: Não foram encontrados recursos HTTP que correspondam ao URI de solicitação 'https://localhost:44367/Api/User/Edit'.
+   em Falzoni.Presentation.Administrator.Clients.Register.UserClient.Update(String url, UserModel obj) na F:\Users\Renato Falzoni\Documents\Pessoal\Projetos\Falzoni\Falzoni.Presentation.Administrator\Clients\Register\UserClient.cs:linha 132
+   em Falzoni.Presentation.Administrator.Areas.Register.Controllers.UserController.Edit(UserModel model) na F:\Users\Renato Falzoni\Documents\Pessoal\Projetos\Falzoni\Falzoni.Presentation.Administrator\Areas\Register\Controllers\UserController.cs:linha 160|
+2024-04-23 18:14:42.2051|ERROR|Falzoni.Presentation.Administrator.Areas.Register.Controllers.UserController|6|Ocorreu um erro: System.ApplicationException: Não foram encontrados recursos HTTP que correspondam ao URI de solicitação 'https://localhost:44367/Api/User/Edit'.
+   em Falzoni.Presentation.Administrator.Clients.Register.UserClient.Update(String url, UserModel obj) na F:\Users\Renato Falzoni\Documents\Pessoal\Projetos\Falzoni\Falzoni.Presentation.Administrator\Clients\Register\UserClient.cs:linha 132
+   em Falzoni.Presentation.Administrator.Areas.Register.Controllers.UserController.Edit(UserModel model) na F:\Users\Renato Falzoni\Documents\Pessoal\Projetos\Falzoni\Falzoni.Presentation.Administrator\Areas\Register\Controllers\UserController.cs:linha 160|
