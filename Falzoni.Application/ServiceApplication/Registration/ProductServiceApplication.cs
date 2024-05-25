@@ -39,6 +39,13 @@ namespace Falzoni.Application.ServiceApplication.Registration
             _productService.Update(productDTO);
         }
 
+        public void Delete(ProductDTO productDTO)
+        {
+            if (productDTO.Id == Guid.Empty)
+                throw new ApplicationException("Erro ao buscar usuário!");
+
+            _productService.Delete(productDTO);
+        }
 
         // Private METHODS
         private void Validate(ProductDTO productDTO)

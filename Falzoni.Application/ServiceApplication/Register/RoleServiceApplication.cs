@@ -11,7 +11,7 @@ using Microsoft.AspNet.Identity;
 
 namespace Falzoni.Application.ServiceApplication.Register
 {
-    public class RoleServiceApplication
+    public class RoleServiceApplication : IDisposable
     {
         #region Attributes
         private ApplicationSignInManager _signInManager;
@@ -89,6 +89,16 @@ namespace Falzoni.Application.ServiceApplication.Register
                 Created = role.Created,
                 Modified = role.Modified,
             };
+        }
+        #endregion
+
+        #region Dispose
+        public void Dispose()
+        {
+            RoleManager.Dispose();
+            SignInManager.Dispose();
+            UserManager.Dispose();
+            GC.SuppressFinalize(this);
         }
         #endregion
 

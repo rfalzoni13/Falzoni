@@ -12,7 +12,7 @@ using System.Web.Http;
 
 namespace Falzoni.Presentation.Api.Controllers.Admin.Identity
 {
-    [RoutePrefix("Api/Account")]
+    [RoutePrefix("Api/IdentityUtility")]
     public class IdentityUtilityController : ApiController
     {
         #region Attributes

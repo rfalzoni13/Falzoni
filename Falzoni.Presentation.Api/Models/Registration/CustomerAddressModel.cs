@@ -40,6 +40,7 @@ namespace Falzoni.Presentation.Api.Models.Registration
 
         public bool Removed { get; set; }
 
+        #region Methods
         public CustomerAddressDTO ConvertToDTO()
         {
             return new CustomerAddressDTO
@@ -58,6 +59,6 @@ namespace Falzoni.Presentation.Api.Models.Registration
                 Removed = this.Removed,
             };
         }
-
+        #endregion
     }
 }

@@ -13,7 +13,7 @@ using System.Reflection;
 
 namespace Falzoni.Infra.Data.Context
 {
-    public class FalzoniContext : IdentityDbContext<ApplicationUser>
+    public abstract class FalzoniContext : IdentityDbContext<ApplicationUser>
     {
         #region Attributes
         public DbSet<Customer> Customer { get; set; }

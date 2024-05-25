@@ -42,9 +42,9 @@ namespace Falzoni.Presentation.Api.Controllers.Admin.Register
         public HttpResponseMessage GelAllNames()
         {
             string action = this.ActionContext.ActionDescriptor.ActionName;
-            _logger.Info(action + " - Iniciado");
             try
             {
+                _logger.Info(action + " - Iniciado");
                 var retorno = _roleServiceApplication.GelAllNames();
 
                 if (retorno != null && retorno.Count() > 0)
@@ -90,9 +90,9 @@ namespace Falzoni.Presentation.Api.Controllers.Admin.Register
         public HttpResponseMessage GetAll()
         {
             string action = this.ActionContext.ActionDescriptor.ActionName;
-            _logger.Info(action + " - Iniciado");
             try
             {
+                _logger.Info(action + " - Iniciado");
                 var retorno = _roleServiceApplication.GetAll();
 
                 if (retorno != null && retorno.Count() > 0)
@@ -140,9 +140,9 @@ namespace Falzoni.Presentation.Api.Controllers.Admin.Register
         public HttpResponseMessage Get(Guid Id)
         {
             string action = this.ActionContext.ActionDescriptor.ActionName;
-            _logger.Info(action + " - Iniciado");
             try
             {
+                _logger.Info(action + " - Iniciado");
                 if (Id != null)
                 {
                     var role = _roleServiceApplication.Get(Id);

@@ -107,7 +107,17 @@ namespace Falzoni.Service.Registration
         {
             using (var transaction = _unitOfWork.BeginTransaction())
             {
-                _customerRepository.Delete(customerDTO.Id);
+                try
+                {
+                    _customerRepository.Delete(customerDTO.Id);
+
+                    transaction.Commit();
+                }
+                catch(Exception ex)
+                {
+                    transaction.Rollback();
+                    throw ex;
+                }
             }
         }
 

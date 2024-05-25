@@ -15,7 +15,7 @@ using System.Transactions;
 
 namespace Falzoni.Application.ServiceApplication.Register
 {
-    public class UserServiceApplication
+    public class UserServiceApplication : IDisposable
     {
         #region Attributes
         private ApplicationSignInManager _signInManager;
@@ -264,13 +264,13 @@ namespace Falzoni.Application.ServiceApplication.Register
                             throw new ArgumentNullException("Nenhum registro de permissão de acesso encontrado!");
                         }
 
-                        var roles = UserManager.GetRolesAsync(user.Id).Result;
+                        var roles = UserManager.GetRoles(user.Id);
                         if (roles == null || roles.Count() <= 0)
                         {
                             throw new ApplicationException("Erro ao cadastrar novo perfil de acesso!");
                         }
 
-                        result = UserManager.RemoveFromRolesAsync(user.Id, roles.ToArray()).Result;
+                        result = UserManager.RemoveFromRoles(user.Id, roles.ToArray());
 
                         if (!result.Succeeded)
                         {
@@ -307,7 +307,7 @@ namespace Falzoni.Application.ServiceApplication.Register
                 try
                 {
                     // Get user and rollback if exists
-                    var user = UserManager.FindByNameAsync(register.UserName).Result;
+                    var user = await UserManager.FindByNameAsync(register.UserName);
 
                     if (user != null)
                     {
@@ -454,26 +454,26 @@ namespace Falzoni.Application.ServiceApplication.Register
 
                     do
                     {
-                        var role = RoleManager.FindByName(register.Roles[i]);
+                        var role = await RoleManager.FindByNameAsync(register.Roles[i]);
                         if (role == null)
                         {
                             throw new ArgumentNullException("Nenhum registro de permissão de acesso encontrado!");
                         }
 
-                        var roles = UserManager.GetRolesAsync(user.Id).Result;
+                        var roles = await UserManager.GetRolesAsync(user.Id);
                         if (roles == null || roles.Count() <= 0)
                         {
                             throw new ApplicationException("Erro ao cadastrar novo perfil de acesso!");
                         }
 
-                        result = UserManager.RemoveFromRolesAsync(user.Id, roles.ToArray()).Result;
+                        result = await UserManager.RemoveFromRolesAsync(user.Id, roles.ToArray());
 
                         if (!result.Succeeded)
                         {
                             throw new DbUpdateException("Erro ao realizar manutenção de acesso!");
                         }
 
-                        result = UserManager.AddToRoleAsync(user.Id, role.Name).Result;
+                        result = await UserManager.AddToRoleAsync(user.Id, role.Name);
 
                         if (!result.Succeeded)
                         {

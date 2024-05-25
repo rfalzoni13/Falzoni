@@ -3,11 +3,11 @@ using Falzoni.Presentation.Api.Attributes;
 using Falzoni.Presentation.Api.Models.Registration;
 using Falzoni.Presentation.Api.Utils;
 using NLog;
-using System.Net.Http;
-using System.Net;
 using System;
-using System.Web.Http;
 using System.Linq;
+using System.Net;
+using System.Net.Http;
+using System.Web.Http;
 
 namespace Falzoni.Presentation.Api.Controllers.Admin.Registration
 {
@@ -202,7 +202,7 @@ namespace Falzoni.Presentation.Api.Controllers.Admin.Registration
         // POST: Api/Product/AddAsync
         //[HttpPost]
         //[Route("AddAsync")]
-        //public async Task<HttpResponseMessage> AddAsync(ProductModel model)
+        //public async Task<HttpResponseMessage> AddAsync([FromBody] ProductModel model)
         //{
         //    string action = this.ActionContext.ActionDescriptor.ActionName;
         //    try
@@ -243,7 +243,7 @@ namespace Falzoni.Presentation.Api.Controllers.Admin.Registration
         //}
         #endregion
 
-        #region Update Produto
+        #region Update Product
         /// <summary>
         /// Atualizar produto
         /// </summary>
@@ -310,7 +310,7 @@ namespace Falzoni.Presentation.Api.Controllers.Admin.Registration
         // PUT: Api/Product/UpdateAsync
         //[HttpPut]
         //[Route("UpdateAsync")]
-        //public async Task<HttpResponseMessage> UpdateAsync(ProductModel model)
+        //public async Task<HttpResponseMessage> UpdateAsync([FromBody] ProductModel model)
         //{
         //    string action = this.ActionContext.ActionDescriptor.ActionName;
         //    try
@@ -336,19 +336,61 @@ namespace Falzoni.Presentation.Api.Controllers.Admin.Registration
         #endregion
 
         #region Delete Product
+        /// <summary>
+        /// Excluir produto
+        /// </summary>
+        /// <response code="400">Bad Request</response>
+        /// <response code="401">Unauthorized</response>
+        /// <response code="500">Internal Server Error</response>
+        /// <remarks>Exclui o produto passando o objeto no body da requisição pelo método DELETE</remarks>
+        /// <param name="model">Objeto de registro do produto</param>
+        /// <returns></returns>
+        // DELETE Api/Product/Delete
+       [HttpDelete]
+       [Route("Delete")]
+        public HttpResponseMessage Delete([FromBody] ProductModel model)
+        {
+            string action = this.ActionContext.ActionDescriptor.ActionName;
+            _logger.Info(action + " - Iniciado");
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    var productDTO = model.ConvertToDTO();
+
+                    _productServiceApplication.Delete(productDTO);
+
+                    _logger.Info(action + " - Sucesso!");
+
+                    _logger.Info(action + " - Finalizado");
+
+                    return Request.CreateResponse(HttpStatusCode.OK, "Produto excluído com sucesso!");
+                }
+                else
+                {
+                    return ResponseManager.ReturnBadRequest(Request, _logger, action, "Por favor, preencha os campos corretamente!");
+                }
+            }
+
+            catch (Exception ex)
+            {
+                return ResponseManager.ReturnExceptionInternalServerError(ex, Request, _logger, action);
+            }
+        }
+
         ///// <summary>
-        ///// Excluir produto
+        ///// Excluir produto assíncrono
         ///// </summary>
         ///// <response code="400">Bad Request</response>
         ///// <response code="401">Unauthorized</response>
         ///// <response code="500">Internal Server Error</response>
-        ///// <remarks>Exclui o produto passando o objeto no body da requisição pelo método DELETE</remarks>
-        ///// <param name="applicationUserRegisterModel">Objeto de registro do produto</param>
+        ///// <remarks>Exclui o produto passando o objeto no body da requisição pelo método DELETE de forma assíncrona</remarks>
+        ///// <param name="model">Objeto de registro do produto</param>
         ///// <returns></returns>
-        // DELETE Api/Product/Delete
+        //// DELETE: Api/Product/DeleteAsync
         //[HttpDelete]
-        //[Route("Delete")]
-        //public HttpResponseMessage Delete([FromBody] ApplicationUserRegisterModel applicationUserRegisterModel)
+        //[Route("DeleteAsync")]
+        //public async Task<HttpResponseMessage> DeleteAsync([FromBody] ProductModel model)
         //{
         //    string action = this.ActionContext.ActionDescriptor.ActionName;
         //    _logger.Info(action + " - Iniciado");
@@ -356,9 +398,9 @@ namespace Falzoni.Presentation.Api.Controllers.Admin.Registration
         //    {
         //        if (ModelState.IsValid)
         //        {
-        //            var userDto = applicationUserRegisterModel.ConvertToDTO();
+        //            var productDTO = model.ConvertToDTO();
 
-        //            _productServiceApplication.Delete(userDto);
+        //            await _productServiceApplication.DeleteAsync(productDTO);
 
         //            _logger.Info(action + " - Sucesso!");
 
@@ -374,41 +416,6 @@ namespace Falzoni.Presentation.Api.Controllers.Admin.Registration
 
         //    catch (Exception ex)
         //    {
-        //        return ResponseManager.ReturnExceptionInternalServerError(ex, Request, _logger, action);
-        //    }
-        //}
-
-        ///// <summary>
-        ///// Excluir produto
-        ///// </summary>
-        ///// <response code="400">Bad Request</response>
-        ///// <response code="401">Unauthorized</response>
-        ///// <response code="500">Internal Server Error</response>
-        ///// <remarks>Exclui o produto passando o objeto no body da requisição pelo método DELETE</remarks>
-        ///// <param name="applicationUserRegisterModel">Objeto de registro do produto</param>
-        ///// <returns></returns>
-        //DELETE: Api/Product/DeleteAsync
-        //[HttpDelete]
-        //[Route("DeleteAsync")]
-        //public async Task<HttpResponseMessage> DeleteAsync(ApplicationUserRegisterModel applicationUserRegisterModel)
-        //{
-        //    string action = this.ActionContext.ActionDescriptor.ActionName;
-        //    try
-        //    {
-        //        _logger.Info(action + " - Iniciado");
-
-        //        var userDto = applicationUserRegisterModel.ConvertToDTO();
-
-        //        await _productServiceApplication.DeleteAsync(userDto);
-
-        //        _logger.Info(action + " - Sucesso!");
-
-        //        _logger.Info(action + " - Finalizado");
-        //        return Request.CreateResponse(System.Net.HttpStatusCode.OK, "Produto deletado com sucesso!");
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        _logger.Fatal(ex, "Erro fatal!");
         //        return ResponseManager.ReturnExceptionInternalServerError(ex, Request, _logger, action);
         //    }
         //}

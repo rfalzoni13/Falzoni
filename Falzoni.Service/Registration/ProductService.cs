@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System;
 using Falzoni.Domain.Interfaces.Base;
 using System.Linq;
+using Falzoni.Domain.Entities.Registration;
 
 namespace Falzoni.Service.Registration
 {
@@ -64,9 +65,35 @@ namespace Falzoni.Service.Registration
             {
                 try
                 {
-                    var product = productDTO.ConvertToEntity();
+                    var product = _productRepository.Get(productDTO.Id);
+
+                    // Update principal data
+                    product.Name = productDTO.Name;
+                    product.Description = productDTO.Description;
+                    product.Price = productDTO.Price;
+
+                    // Update modified entity data
+                    product.Modified = DateTime.Now;
 
                     _productRepository.Update(product);
+
+                    transaction.Commit();
+                }
+                catch (Exception ex)
+                {
+                    transaction.Rollback();
+                    throw ex;
+                }
+            }
+        }
+
+        public void Delete(ProductDTO productDTO)
+        {
+            using (var transaction = _unitOfWork.BeginTransaction())
+            {
+                try
+                {
+                    _productRepository.Delete(productDTO.Id);
 
                     transaction.Commit();
                 }

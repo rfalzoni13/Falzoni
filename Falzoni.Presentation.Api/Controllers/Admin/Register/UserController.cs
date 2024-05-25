@@ -43,9 +43,9 @@ namespace Falzoni.Presentation.Api.Controllers.Admin.Register
         public HttpResponseMessage GetAll()
         {
             string action = this.ActionContext.ActionDescriptor.ActionName;
-            _logger.Info(action + " - Iniciado");
             try
             {
+                _logger.Info(action + " - Iniciado");
                 var retorno = _userServiceApplication.GetAll();
 
                 if (retorno != null && retorno.Count() > 0)
@@ -93,9 +93,9 @@ namespace Falzoni.Presentation.Api.Controllers.Admin.Register
         public HttpResponseMessage Get(Guid Id)
         {
             string action = this.ActionContext.ActionDescriptor.ActionName;
-            _logger.Info(action + " - Iniciado");
             try
             {
+                _logger.Info(action + " - Iniciado");
                 if (Id != null)
                 {
                     var usuario = _userServiceApplication.Get(Id);
@@ -202,7 +202,7 @@ namespace Falzoni.Presentation.Api.Controllers.Admin.Register
         // POST: Api/User/AddAsync
         [HttpPost]
         [Route("AddAsync")]
-        public async Task<HttpResponseMessage> AddAsync(ApplicationUserRegisterModel applicationUserRegisterModel)
+        public async Task<HttpResponseMessage> AddAsync([FromBody] ApplicationUserRegisterModel applicationUserRegisterModel)
         {
             string action = this.ActionContext.ActionDescriptor.ActionName;
             try
@@ -226,9 +226,19 @@ namespace Falzoni.Presentation.Api.Controllers.Admin.Register
                     return ResponseManager.ReturnBadRequest(Request, _logger, action, "Por favor, preencha os campos corretamente!");
                 }
             }
+
+            catch (HttpResponseException ex)
+            {
+                if (ex.Response.StatusCode == HttpStatusCode.NotFound)
+                {
+                    return ResponseManager.ReturnExceptionNotFound(ex, Request, _logger, action, "Nenhum registro encontrado!");
+                }
+
+                return ResponseManager.ReturnExceptionInternalServerError(ex, Request, _logger, action);
+            }
+
             catch (Exception ex)
             {
-                _logger.Fatal(ex, "Erro fatal!");
                 return ResponseManager.ReturnExceptionInternalServerError(ex, Request, _logger, action);
             }
         }
@@ -300,25 +310,42 @@ namespace Falzoni.Presentation.Api.Controllers.Admin.Register
         // PUT: Api/User/UpdateAsync
         [HttpPut]
         [Route("UpdateAsync")]
-        public async Task<HttpResponseMessage> UpdateAsync(ApplicationUserRegisterModel applicationUserRegisterModel)
+        public async Task<HttpResponseMessage> UpdateAsync([FromBody] ApplicationUserRegisterModel applicationUserRegisterModel)
         {
             string action = this.ActionContext.ActionDescriptor.ActionName;
+            _logger.Info(action + " - Iniciado");
             try
             {
-                _logger.Info(action + " - Iniciado");
+                if (ModelState.IsValid)
+                {
+                    var userDto = applicationUserRegisterModel.ConvertToDTO();
 
-                var userDto = applicationUserRegisterModel.ConvertToDTO();
+                    await _userServiceApplication.UpdateAsync(userDto);
 
-                await _userServiceApplication.UpdateAsync(userDto);
+                    _logger.Info(action + " - Sucesso!");
 
-                _logger.Info(action + " - Sucesso!");
+                    _logger.Info(action + " - Finalizado");
 
-                _logger.Info(action + " - Finalizado");
-                return Request.CreateResponse(System.Net.HttpStatusCode.OK, "Usuário atualizado com sucesso!");
+                    return Request.CreateResponse(HttpStatusCode.OK, "Usuário atualizado com sucesso!");
+                }
+                else
+                {
+                    return ResponseManager.ReturnBadRequest(Request, _logger, action, "Por favor, preencha os campos corretamente!");
+                }
             }
+
+            catch (HttpResponseException ex)
+            {
+                if (ex.Response.StatusCode == HttpStatusCode.NotFound)
+                {
+                    return ResponseManager.ReturnExceptionNotFound(ex, Request, _logger, action, "Nenhum registro encontrado!");
+                }
+
+                return ResponseManager.ReturnExceptionInternalServerError(ex, Request, _logger, action);
+            }
+
             catch (Exception ex)
             {
-                _logger.Fatal(ex, "Erro fatal!");
                 return ResponseManager.ReturnExceptionInternalServerError(ex, Request, _logger, action);
             }
         }
@@ -353,6 +380,7 @@ namespace Falzoni.Presentation.Api.Controllers.Admin.Register
 
                     _logger.Info(action + " - Finalizado");
 
+
                     return Request.CreateResponse(HttpStatusCode.OK, "Usuário excluído com sucesso!");
                 }
                 else
@@ -368,18 +396,18 @@ namespace Falzoni.Presentation.Api.Controllers.Admin.Register
         }
 
         /// <summary>
-        /// Excluir usuario
+        /// Excluir usuario assíncrono
         /// </summary>
         /// <response code="400">Bad Request</response>
         /// <response code="401">Unauthorized</response>
         /// <response code="500">Internal Server Error</response>
-        /// <remarks>Exclui o usuario passando o objeto no body da requisição pelo método DELETE</remarks>
+        /// <remarks>Exclui o usuario passando o objeto no body da requisição pelo método DELETE de forma assíncrona</remarks>
         /// <param name="applicationUserRegisterModel">Objeto de registro do usuario</param>
         /// <returns></returns>
         //DELETE: Api/User/DeleteAsync
         [HttpDelete]
         [Route("DeleteAsync")]
-        public async Task<HttpResponseMessage> DeleteAsync(ApplicationUserRegisterModel applicationUserRegisterModel)
+        public async Task<HttpResponseMessage> DeleteAsync([FromBody] ApplicationUserRegisterModel applicationUserRegisterModel)
         {
             string action = this.ActionContext.ActionDescriptor.ActionName;
             try

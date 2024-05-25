@@ -25,6 +25,7 @@ namespace Falzoni.Infra.Data.Configuration.Registration
 
             Property(c => c.Created).IsRequired();
 
-            Property(c => c.Modified).IsOptional();        }
+            Property(c => c.Modified).IsOptional();        
+        }
     }
 }

@@ -37,7 +37,7 @@ namespace Falzoni.Application.IdentityConfiguration
             PublicClientId = "self";
             OAuthOptions = new OAuthAuthorizationServerOptions()
             {
-                AllowInsecureHttp = true, //true apenas para ambiente de desenvolvimento
+                AllowInsecureHttp = true, // true for development only
                 TokenEndpointPath = new PathString("/Api/Account/Login"),
                 AuthorizeEndpointPath = new PathString("/Api/Account/ExternalLogin"),
                 AccessTokenExpireTimeSpan = TimeSpan.FromDays(1),

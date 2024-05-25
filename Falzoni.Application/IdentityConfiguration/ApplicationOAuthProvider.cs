@@ -131,20 +131,20 @@ namespace Falzoni.Application.IdentityConfiguration
         {
             var userManager = HttpContext.Current.GetOwinContext().GetUserManager<ApplicationUserManager>();
 
-            ExternalLoginData externalLogin = ExternalLoginData.FromIdentity(user.Identity as ClaimsIdentity);
+            ExternalLoginData externalLoginData = ExternalLoginData.FromIdentity(user.Identity as ClaimsIdentity);
 
-            if (externalLogin == null)
+            if (externalLoginData == null)
             {
                 throw new Exception("Login não encontrado!");
             }
 
-            if (externalLogin.LoginProvider != provider)
+            if (externalLoginData.LoginProvider != provider)
             {
                 Logout(context, DefaultAuthenticationTypes.ExternalCookie);
                 throw new ApplicationException("Usuário não cadastrado com provedor de login");
             }
 
-            ApplicationUser applicationUser = await userManager.FindAsync(new UserLoginInfo(externalLogin.LoginProvider, externalLogin.ProviderKey));
+            ApplicationUser applicationUser = await userManager.FindAsync(new UserLoginInfo(externalLoginData.LoginProvider, externalLoginData.ProviderKey));
 
             bool hasRegistered = applicationUser != null;
 
@@ -162,7 +162,7 @@ namespace Falzoni.Application.IdentityConfiguration
             }
             else
             {
-                IEnumerable<Claim> claims = externalLogin.GetClaims();
+                IEnumerable<Claim> claims = externalLoginData.GetClaims();
                 ClaimsIdentity ClaimIdentity = new ClaimsIdentity(claims, OAuthDefaults.AuthenticationType);
                 context.Authentication.SignIn(ClaimIdentity);
             }

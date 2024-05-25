@@ -29,7 +29,7 @@ namespace Falzoni.Presentation.Api.Models.Registration
         public decimal Price { get; set; }
 
 
-        public virtual ProductCategoryDTO Category { get; set; }
+        public virtual ProductCategoryModel Category { get; set; }
 
 
         #region Methods

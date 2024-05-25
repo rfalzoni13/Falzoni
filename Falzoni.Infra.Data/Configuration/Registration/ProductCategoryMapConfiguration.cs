@@ -7,9 +7,9 @@ namespace Falzoni.Infra.Data.Configuration.Registration
     {
         public ProductCategoryMapConfiguration()
         {
-            HasKey(x => x.Id);
+            HasKey(p => p.Id);
 
-            Property(x => x.Name).IsRequired().HasMaxLength(512);
+            Property(p => p.Name).IsRequired().HasMaxLength(512);
 
             Property(p => p.Created).IsRequired();
 

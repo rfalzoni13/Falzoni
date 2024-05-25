@@ -2,7 +2,6 @@
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security;
-using System.Net;
 
 namespace Falzoni.Application.IdentityConfiguration
 {

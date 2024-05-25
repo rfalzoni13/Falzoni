@@ -42,9 +42,9 @@ namespace Falzoni.Presentation.Api.Controllers.Admin.Registration
         public HttpResponseMessage GetAll()
         {
             string action = this.ActionContext.ActionDescriptor.ActionName;
-            _logger.Info(action + " - Iniciado");
             try
             {
+                _logger.Info(action + " - Iniciado");
                 var retorno = _customerServiceApplication.GetAll();
 
                 if (retorno != null && retorno.Count() > 0)
@@ -92,9 +92,9 @@ namespace Falzoni.Presentation.Api.Controllers.Admin.Registration
         public HttpResponseMessage Get(Guid Id)
         {
             string action = this.ActionContext.ActionDescriptor.ActionName;
-            _logger.Info(action + " - Iniciado");
             try
             {
+                _logger.Info(action + " - Iniciado");
                 if (Id != null)
                 {
                     var customer = _customerServiceApplication.Get(Id);
@@ -201,7 +201,7 @@ namespace Falzoni.Presentation.Api.Controllers.Admin.Registration
         // POST: Api/Customer/AddAsync
         //[HttpPost]
         //[Route("AddAsync")]
-        //public async Task<HttpResponseMessage> AddAsync(CustomerModel model)
+        //public async Task<HttpResponseMessage> AddAsync([FromBody] CustomerModel model)
         //{
         //    string action = this.ActionContext.ActionDescriptor.ActionName;
         //    try
@@ -309,7 +309,7 @@ namespace Falzoni.Presentation.Api.Controllers.Admin.Registration
         // PUT: Api/Customer/UpdateAsync
         //[HttpPut]
         //[Route("UpdateAsync")]
-        //public async Task<HttpResponseMessage> UpdateAsync(CustomerModel model)
+        //public async Task<HttpResponseMessage> UpdateAsync([FromBody] CustomerModel model)
         //{
         //    string action = this.ActionContext.ActionDescriptor.ActionName;
         //    try
@@ -378,18 +378,18 @@ namespace Falzoni.Presentation.Api.Controllers.Admin.Registration
         }
 
         ///// <summary>
-        ///// Excluir cliente
+        ///// Excluir cliente assíncrono
         ///// </summary>
         ///// <response code="400">Bad Request</response>
         ///// <response code="401">Unauthorized</response>
         ///// <response code="500">Internal Server Error</response>
-        ///// <remarks>Exclui o cliente passando o objeto no body da requisição pelo método DELETE</remarks>
+        ///// <remarks>Exclui o cliente passando o objeto no body da requisição pelo método DELETE de forma assíncrona</remarks>
         ///// <param name="model">Objeto de registro do cliente</param>
         ///// <returns></returns>
         //DELETE: Api/Customer/DeleteAsync
         //[HttpDelete]
         //[Route("DeleteAsync")]
-        //public async Task<HttpResponseMessage> DeleteAsync(CustomerModel model)
+        //public async Task<HttpResponseMessage> DeleteAsync([FromBody] CustomerModel model)
         //{
         //    string action = this.ActionContext.ActionDescriptor.ActionName;
         //    try
