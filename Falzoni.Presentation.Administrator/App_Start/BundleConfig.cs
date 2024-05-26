@@ -23,8 +23,8 @@ namespace Falzoni.Presentation.Administrator
                         "~/Scripts/libraries/modernizr-*"));
 
             bundles.Add(new ScriptBundle("~/bundles/js/admin-lte").Include(
-                      "~/admin-lte/icheck/icheck.js",
-                      "~/admin-lte/js/adminlte.js"));
+                      "~/Scripts/libraries/icheck/icheck.js",
+                      "~/Scripts/libraries/admin-lte/adminlte.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/js/bootstrap").Include(
                       "~/Scripts/libraries/bootstrap/bootstrap*"));
@@ -53,8 +53,8 @@ namespace Falzoni.Presentation.Administrator
                       "~/Content/libraries/bootstrap/bootstrap.css"));
 
             bundles.Add(new StyleBundle("~/bundles/admin-lte").Include(
-                "~/admin-lte/css/AdminLTE.css",
-                "~/admin-lte/icheck/skins/square/_all.css",
+                "~/Content/libraries/admin-lte/css/AdminLTE.css",
+                "~/Content/libraries/icheck/skins/square/_all.css",
                 "~/Content/libraries/font-awesome.css"));
 
             bundles.Add(new StyleBundle("~/bundles/datatable").Include(
@@ -62,7 +62,7 @@ namespace Falzoni.Presentation.Administrator
 
             bundles.Add(new StyleBundle("~/bundles/select2").Include(
                       "~/Content/libraries/select2/select2.*",
-                      "~/admin-lte/css/alt/AdminLTE-select2.*"));
+                      "~/Content/libraries/admin-lte/css/alt/AdminLTE-select2.*"));
 
             bundles.Add(new StyleBundle("~/bundles/bootstrap-datepicker").Include(
                       "~/Content/libraries/bootstrap-datepicker/bootstrap-datepicker.css"));
