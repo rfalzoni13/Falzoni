@@ -53,7 +53,7 @@ namespace Falzoni.Presentation.Administrator
                       "~/Content/libraries/bootstrap/bootstrap.css"));
 
             bundles.Add(new StyleBundle("~/bundles/admin-lte").Include(
-                "~/Content/libraries/admin-lte/css/AdminLTE.css",
+                "~/Content/libraries/admin-lte/AdminLTE.css",
                 "~/Content/libraries/icheck/skins/square/_all.css",
                 "~/Content/libraries/font-awesome.css"));
 
@@ -62,7 +62,7 @@ namespace Falzoni.Presentation.Administrator
 
             bundles.Add(new StyleBundle("~/bundles/select2").Include(
                       "~/Content/libraries/select2/select2.*",
-                      "~/Content/libraries/admin-lte/css/alt/AdminLTE-select2.*"));
+                      "~/Content/libraries/admin-lte/alt/AdminLTE-select2.*"));
 
             bundles.Add(new StyleBundle("~/bundles/bootstrap-datepicker").Include(
                       "~/Content/libraries/bootstrap-datepicker/bootstrap-datepicker.css"));

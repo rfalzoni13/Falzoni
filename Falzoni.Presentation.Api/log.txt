@@ -360,3 +360,25 @@
 2024-04-23 18:19:32.4313|INFO|Falzoni.Presentation.Api.Controllers.Admin.Identity.AccountController|23|Logout - Iniciado|
 2024-04-23 18:19:32.4313|INFO|Falzoni.Presentation.Api.Controllers.Admin.Identity.AccountController|23|Logout - Sucesso!|
 2024-04-23 18:19:32.4313|INFO|Falzoni.Presentation.Api.Controllers.Admin.Identity.AccountController|23|Logout - Finalizado|
+2024-05-25 21:56:37.8190|INFO|Falzoni.Presentation.Api.Controllers.Admin.Register.UserController|15|Get - Iniciado|
+2024-05-25 21:56:37.9127|INFO|Falzoni.Presentation.Api.Controllers.Admin.Register.UserController|15|Get - Sucesso!|
+2024-05-25 21:56:37.9127|INFO|Falzoni.Presentation.Api.Controllers.Admin.Register.UserController|15|Get - Finalizado|
+2024-05-25 21:58:25.3178|INFO|Falzoni.Presentation.Api.Controllers.Admin.Register.UserController|10|GetAll - Iniciado|
+2024-05-25 21:58:25.3380|INFO|Falzoni.Presentation.Api.Controllers.Admin.Register.UserController|10|GetAll - Sucesso!|
+2024-05-25 21:58:25.3380|INFO|Falzoni.Presentation.Api.Controllers.Admin.Register.UserController|10|GetAll - Finalizado|
+2024-05-25 21:58:26.7108|INFO|Falzoni.Presentation.Api.Controllers.Admin.Register.RoleController|9|GetAll - Iniciado|
+2024-05-25 21:58:26.7728|INFO|Falzoni.Presentation.Api.Controllers.Admin.Register.RoleController|9|GetAll - Sucesso!|
+2024-05-25 21:58:26.7728|INFO|Falzoni.Presentation.Api.Controllers.Admin.Register.RoleController|9|GetAll - Finalizado|
+2024-05-25 21:58:33.0339|INFO|Falzoni.Presentation.Api.Controllers.Admin.Registration.CustomerController|9|GetAll - Iniciado|
+2024-05-25 21:58:33.1193|WARN|Falzoni.Presentation.Api.Controllers.Admin.Registration.CustomerController|9|GetAll - Error: System.Web.Http.HttpResponseException: O processamento da solicitação HTTP resultou em uma exceção. Consulte a resposta HTTP retornada pela propriedade 'Response' desta exceção para obter mais detalhes.
+   em Falzoni.Presentation.Api.Controllers.Admin.Registration.CustomerController.GetAll() na F:\Users\Renato Falzoni\Documents\Pessoal\Projetos\C# .NET\Falzoni\Falzoni.Presentation.Api\Controllers\Admin\Registration\CustomerController.cs:linha 59|
+2024-05-25 21:58:33.1193|INFO|Falzoni.Presentation.Api.Controllers.Admin.Registration.CustomerController|9|GetAll - Finalizado|
+2024-05-25 21:58:34.5336|INFO|Falzoni.Presentation.Api.Controllers.Admin.Register.RoleController|9|GetAll - Iniciado|
+2024-05-25 21:58:34.5336|INFO|Falzoni.Presentation.Api.Controllers.Admin.Register.RoleController|9|GetAll - Sucesso!|
+2024-05-25 21:58:34.5336|INFO|Falzoni.Presentation.Api.Controllers.Admin.Register.RoleController|9|GetAll - Finalizado|
+2024-05-25 21:58:36.6206|INFO|Falzoni.Presentation.Api.Controllers.Admin.Register.UserController|15|GetAll - Iniciado|
+2024-05-25 21:58:36.6369|INFO|Falzoni.Presentation.Api.Controllers.Admin.Register.UserController|15|GetAll - Sucesso!|
+2024-05-25 21:58:36.6369|INFO|Falzoni.Presentation.Api.Controllers.Admin.Register.UserController|15|GetAll - Finalizado|
+2024-05-25 21:58:39.2840|INFO|Falzoni.Presentation.Api.Controllers.Admin.Identity.AccountController|9|Logout - Iniciado|
+2024-05-25 21:58:39.2840|INFO|Falzoni.Presentation.Api.Controllers.Admin.Identity.AccountController|9|Logout - Sucesso!|
+2024-05-25 21:58:39.2840|INFO|Falzoni.Presentation.Api.Controllers.Admin.Identity.AccountController|9|Logout - Finalizado|
