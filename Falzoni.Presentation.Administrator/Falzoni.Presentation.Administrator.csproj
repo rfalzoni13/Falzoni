@@ -241,6 +241,8 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\font-awesome.css" />
+    <Content Include="Content\font-awesome.min.css" />
     <Content Include="Content\libraries\admin-lte\AdminLTE.css" />
     <Content Include="Content\libraries\admin-lte\AdminLTE.min.css" />
     <Content Include="Content\libraries\admin-lte\alt\AdminLTE-bootstrap-social.css" />
@@ -441,8 +443,8 @@
     <Content Include="Content\libraries\bootstrap\bootstrap.min.css" />
     <Content Include="Content\libraries\font-awesome.css" />
     <Content Include="Content\libraries\font-awesome.min.css" />
-    <Content Include="Content\fonts\fontawesome-webfont.svg" />
-    <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Content\Images\Profile\user.png" />
     <Content Include="Content\libraries\bootstrap-datepicker\bootstrap-datepicker.css" />
     <Content Include="Content\libraries\bootstrap-datepicker\bootstrap-datepicker.min.css" />
@@ -478,14 +480,8 @@
     <Content Include="Content\tether\tether.css" />
     <Content Include="Content\tether\tether.min.css" />
     <Content Include="favicon.ico" />
-    <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="fonts\FontAwesome.otf" />
-    <Content Include="fonts\fontawesome-webfont.woff2" />
-    <Content Include="fonts\fontawesome-webfont.woff" />
-    <Content Include="fonts\fontawesome-webfont.ttf" />
-    <Content Include="fonts\fontawesome-webfont.eot" />
     <Content Include="Content\libraries\admin-lte\adminlte.min.css.map" />
     <Content Include="Content\libraries\admin-lte\adminlte.css.map" />
     <Content Include="Content\libraries\bootstrap\bootstrap.min.css.map" />
@@ -586,15 +582,15 @@
     <Content Include="Scripts\libraries\bootstrap\bootstrap.min.js" />
     <Content Include="NLog.config" />
     <Content Include="Areas\Register\Views\web.config" />
-    <Content Include="Content\fonts\fontawesome-webfont.eot" />
-    <Content Include="Content\fonts\fontawesome-webfont.ttf" />
-    <Content Include="Content\fonts\fontawesome-webfont.woff" />
-    <Content Include="Content\fonts\fontawesome-webfont.woff2" />
-    <Content Include="Content\fonts\FontAwesome.otf" />
-    <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="Content\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="Content\libraries\bootstrap-datepicker\bootstrap-datepicker.css.map" />
     <Content Include="Content\libraries\bootstrap-datepicker\bootstrap-datepicker.standalone.css.map" />
     <Content Include="Content\libraries\bootstrap-datepicker\bootstrap-datepicker3.css.map" />
