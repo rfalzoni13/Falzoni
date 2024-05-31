@@ -1,4 +1,5 @@
-﻿using Falzoni.Presentation.Administrator.Models.Common;
+﻿using Falzoni.Presentation.Administrator.Clients.Interfaces.Base;
+using Falzoni.Presentation.Administrator.Models.Common;
 using Falzoni.Utils.Helpers;
 using Newtonsoft.Json;
 using System;
@@ -53,7 +54,7 @@ namespace Falzoni.Presentation.Administrator.Clients.Base
                 }
                 else
                 {
-                    StatusCodeModel statusCode = response.Content.ReadAsAsync<StatusCodeModel>().Result;
+                    StatusCodeModel statusCode = await response.Content.ReadAsAsync<StatusCodeModel>();
 
                     throw new ApplicationException(statusCode.Message);
                 }
@@ -93,7 +94,7 @@ namespace Falzoni.Presentation.Administrator.Clients.Base
                 }
                 else
                 {
-                    StatusCodeModel statusCode = response.Content.ReadAsAsync<StatusCodeModel>().Result;
+                    StatusCodeModel statusCode = await response.Content.ReadAsAsync<StatusCodeModel>();
 
                     throw new ApplicationException(statusCode.Message);
                 }
@@ -112,7 +113,7 @@ namespace Falzoni.Presentation.Administrator.Clients.Base
                     RequestUri = new Uri(url),
                     Content = new StringContent(JsonConvert.SerializeObject(obj), Encoding.UTF8, "application/json")
                 };
-                var response = client.SendAsync(request).Result;
+                HttpResponseMessage response = client.SendAsync(request).Result;
                 if (response.IsSuccessStatusCode)
                 {
                     return response.Content.ReadAsStringAsync().Result;
@@ -138,14 +139,14 @@ namespace Falzoni.Presentation.Administrator.Clients.Base
                     RequestUri = new Uri(url),
                     Content = new StringContent(JsonConvert.SerializeObject(obj), Encoding.UTF8, "application/json")
                 };
-                var response = await client.SendAsync(request);
+                HttpResponseMessage response = await client.SendAsync(request);
                 if (response.IsSuccessStatusCode)
                 {
                     return await response.Content.ReadAsStringAsync();
                 }
                 else
                 {
-                    StatusCodeModel statusCode = response.Content.ReadAsAsync<StatusCodeModel>().Result;
+                    StatusCodeModel statusCode = await response.Content.ReadAsAsync<StatusCodeModel>();
 
                     throw new ApplicationException(statusCode.Message);
                 }
@@ -185,7 +186,7 @@ namespace Falzoni.Presentation.Administrator.Clients.Base
                 }
                 else
                 {
-                    StatusCodeModel statusCode = response.Content.ReadAsAsync<StatusCodeModel>().Result;
+                    StatusCodeModel statusCode = await response.Content.ReadAsAsync<StatusCodeModel>();
 
                     throw new ApplicationException(statusCode.Message);
                 }
@@ -226,7 +227,7 @@ namespace Falzoni.Presentation.Administrator.Clients.Base
                 }
                 else
                 {
-                    StatusCodeModel statusCode = response.Content.ReadAsAsync<StatusCodeModel>().Result;
+                    StatusCodeModel statusCode = await response.Content.ReadAsAsync<StatusCodeModel>();
 
                     throw new ApplicationException(statusCode.Message);
                 }
@@ -266,7 +267,7 @@ namespace Falzoni.Presentation.Administrator.Clients.Base
                 }
                 else
                 {
-                    StatusCodeModel statusCode = response.Content.ReadAsAsync<StatusCodeModel>().Result;
+                    StatusCodeModel statusCode = await response.Content.ReadAsAsync<StatusCodeModel>();
 
                     throw new ApplicationException(statusCode.Message);
                 }

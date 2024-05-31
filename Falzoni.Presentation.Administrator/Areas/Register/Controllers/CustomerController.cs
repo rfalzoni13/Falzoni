@@ -13,6 +13,7 @@ using System.Web.Mvc;
 
 namespace Falzoni.Presentation.Administrator.Areas.Register.Controllers
 {
+    [Authorize]
     public class CustomerController : Controller
     {
         private readonly ICustomerClient _customerClient;
@@ -33,18 +34,18 @@ namespace Falzoni.Presentation.Administrator.Areas.Register.Controllers
         [HttpGet]
         public async Task<JsonResult> LoadTable()
         {
-            var tabela = new CustomerTableModel();
+            var table = new CustomerTableModel();
 
             try
             {
-                tabela = await _customerClient.GetTableAsync(UrlConfigurationHelper.CustomerGetAll);
+                table = await _customerClient.GetTableAsync(UrlConfigurationHelper.CustomerGetAll);
             }
             catch (Exception ex)
             {
                 _logger.Fatal("Ocorreu um erro: " + ex);
             }
 
-            return Json(tabela, JsonRequestBehavior.AllowGet);
+            return Json(table, JsonRequestBehavior.AllowGet);
         }
 
         //GET: Register/Customer/Create

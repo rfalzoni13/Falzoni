@@ -17,8 +17,8 @@
     </h1>
     <ol class="breadcrumb">
         <li><a href="@Url.Action("Index", "Home", new { Area = string.Empty })"><i class="glyphicon glyphicon-home"></i> Home</a></li>
-        <li><a href="@Url.Action("Index", "Usuario", new { area = "Cadastro" } )"><i class="glyphicon glyphicon-edit"></i> Cadastro</a></li>
-        <li><a href="@Url.Action("Index", "Usuario", new { area = "Cadastro" } )"><i class="fa fa-user"></i> Usuário</a></li>
+        <li><a href="@Url.Action("Index", "Usuario", new { Area = "Cadastro" } )"><i class="glyphicon glyphicon-edit"></i> Cadastro</a></li>
+        <li><a href="@Url.Action("Index", "Usuario", new { Area = "Cadastro" } )"><i class="fa fa-user"></i> Usuário</a></li>
         <li class="active"><i class="fa fa-plus-square"></i> @(action == "Create" ? "Novo" : "Editar")</li>
     </ol>
 </section><!--section -->
@@ -54,11 +54,11 @@
                             @Html.LabelFor(x => x.Email)
                             @Html.TextBoxFor(x => x.Email, new { @class = "form-control" })
                         </div>
-                        @if (Model.Generos != null)
+                        @if (Model.Genders != null)
                         {
                             <div class="col-md-3">
                                 @Html.Label("Sexo")
-                                @Html.DropDownListFor(x => x.Gender, Model.Generos, "Selecione...", new { @class = "form-control" })
+                                @Html.DropDownListFor(x => x.Gender, Model.Genders, "Selecione...", new { @class = "form-control" })
                             </div>
                         }
                     </div>

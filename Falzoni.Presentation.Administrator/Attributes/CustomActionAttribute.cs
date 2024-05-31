@@ -30,7 +30,7 @@ namespace Falzoni.Presentation.Administrator.Attributes
             base.OnActionExecuting(filterContext);
         }
 
-        protected virtual IOwinContext GetOwinContext()
+        private IOwinContext GetOwinContext()
         {
             return HttpContext.Current.GetOwinContext();
         }

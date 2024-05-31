@@ -33,6 +33,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Falzoni.Presentation.Admini
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Falzoni.Resources", "Falzoni.Resources\Falzoni.Resources.csproj", "{F4EC40B9-5007-480B-B858-D9FD883FF855}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Falzoni.Presentation.Web", "Falzoni.Presentation.Web\Falzoni.Presentation.Web.csproj", "{4EF2EEB3-DA28-4BC8-916F-9E0A628D5ABF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{F4EC40B9-5007-480B-B858-D9FD883FF855}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F4EC40B9-5007-480B-B858-D9FD883FF855}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F4EC40B9-5007-480B-B858-D9FD883FF855}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4EF2EEB3-DA28-4BC8-916F-9E0A628D5ABF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4EF2EEB3-DA28-4BC8-916F-9E0A628D5ABF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4EF2EEB3-DA28-4BC8-916F-9E0A628D5ABF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4EF2EEB3-DA28-4BC8-916F-9E0A628D5ABF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -89,6 +95,7 @@ Global
 		{0688898A-896F-42BC-BD9B-EB595A9BDA2C} = {E1E0E7F8-EE2F-49B0-B6E2-DC0DD3A55A06}
 		{EF340354-0479-4C27-89B6-3C27A78160D1} = {E1E0E7F8-EE2F-49B0-B6E2-DC0DD3A55A06}
 		{F4EC40B9-5007-480B-B858-D9FD883FF855} = {4B8E01F0-21AB-4708-AF7B-2903610653B1}
+		{4EF2EEB3-DA28-4BC8-916F-9E0A628D5ABF} = {E1E0E7F8-EE2F-49B0-B6E2-DC0DD3A55A06}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {92734646-D779-4B59-B98E-05B65392738F}

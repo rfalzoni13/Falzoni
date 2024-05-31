@@ -32,17 +32,17 @@ namespace Falzoni.Presentation.Administrator.Clients.Registration
                     {
                         var customers = await response.Content.ReadAsAsync<ICollection<CustomerModel>>();
 
-                        foreach (var cliente in customers)
+                        foreach (var customer in customers)
                         {
                             table.data.Add(new CustomerListTableModel()
                             {
-                                Id = cliente.Id,
-                                Name = cliente.Name,
-                                Document = cliente.Document,
-                                Email = cliente.Email,
-                                Gender = cliente.Gender,
-                                Created = cliente.Created,
-                                Modified = cliente.Modified
+                                Id = customer.Id,
+                                Name = customer.Name,
+                                Document = customer.Document,
+                                Email = customer.Email,
+                                Gender = customer.Gender,
+                                Created = customer.Created,
+                                Modified = customer.Modified
                             });
                         }
 

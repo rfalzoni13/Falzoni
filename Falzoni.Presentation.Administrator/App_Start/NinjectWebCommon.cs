@@ -7,6 +7,7 @@ namespace Falzoni.Presentation.Administrator.App_Start
     using System.Web;
     using Falzoni.Presentation.Administrator.Clients.Base;
     using Falzoni.Presentation.Administrator.Clients.Identity;
+    using Falzoni.Presentation.Administrator.Clients.Interfaces.Base;
     using Falzoni.Presentation.Administrator.Clients.Interfaces.Register;
     using Falzoni.Presentation.Administrator.Clients.Interfaces.Registration;
     using Falzoni.Presentation.Administrator.Clients.Register;

@@ -107,8 +107,6 @@ namespace Falzoni.Presentation.Administrator.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> ExternalLogin(string provider, string returnUrl)
         {
-            var url = $"{UrlConfigurationHelper.AccountExternalLogin}?provider={provider}";
-
             await _accountClient.ExternalLogin(provider);
 
             return RedirectToAction("Index", "Home");
@@ -189,6 +187,7 @@ namespace Falzoni.Presentation.Administrator.Controllers
 
         #region ForgotPassword
         //GET: /Account/ForgotPassword
+        [HttpGet]
         public ActionResult ForgotPassword()
         {
             var model = new ForgotPasswordModel();

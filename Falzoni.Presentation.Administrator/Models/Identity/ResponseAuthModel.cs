@@ -1,6 +1,6 @@
 ﻿namespace Falzoni.Presentation.Administrator.Models.Identity
 {
-    public class ResponseLoginModel
+    public class ResponseAuthModel
     {
         public string access_token { get; set; }
 

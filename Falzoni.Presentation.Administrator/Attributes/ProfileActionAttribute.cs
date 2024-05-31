@@ -37,7 +37,7 @@ namespace Falzoni.Presentation.Administrator.Attributes
 
                     filterContext.Controller.ViewBag.Usuario = StringHelper.SetDashboardName(user.Name);
                     filterContext.Controller.ViewBag.Perfil = user.Roles[0];
-                    filterContext.Controller.ViewBag.Foto = user.PhotoPath;
+                    filterContext.Controller.ViewBag.Photo = user.PhotoPath;
                 }
                 catch (Exception ex)
                 {

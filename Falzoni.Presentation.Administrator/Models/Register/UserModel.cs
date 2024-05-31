@@ -37,9 +37,7 @@ namespace Falzoni.Presentation.Administrator.Models.Register
 
         public virtual FileModel File { get; set; }
 
-        public virtual List<string> Perfis { get; set; }
-
-        public virtual List<SelectListItem> Generos
+        public virtual List<SelectListItem> Genders
         {
             get
             {

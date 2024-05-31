@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace Falzoni.Presentation.Administrator.Clients.Base
+namespace Falzoni.Presentation.Administrator.Clients.Interfaces.Base
 {
     public interface IBaseClient<T, TTable>
         where T : class

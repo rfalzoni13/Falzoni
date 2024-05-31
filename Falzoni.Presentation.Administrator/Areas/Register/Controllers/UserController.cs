@@ -13,6 +13,7 @@ using System.Web.Mvc;
 
 namespace Falzoni.Presentation.Administrator.Areas.Register.Controllers
 {
+    [Authorize]
     public class UserController : Controller
     {
         private readonly IUserClient _userClient;

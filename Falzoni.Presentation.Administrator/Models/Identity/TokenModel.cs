@@ -5,8 +5,6 @@ namespace Falzoni.Presentation.Administrator.Models.Identity
 {
     public class TokenModel
     {
-        public int UsuarioId { get; set; }
-
         [JsonProperty("access_token")]
         public string AccessToken { get; set; }
 

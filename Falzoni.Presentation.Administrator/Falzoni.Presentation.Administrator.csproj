@@ -190,15 +190,17 @@
     <Compile Include="Attributes\ProfileActionAttribute.cs" />
     <Compile Include="Attributes\UserRegisterAttribute.cs" />
     <Compile Include="Clients\Base\BaseClient.cs" />
-    <Compile Include="Clients\Base\IBaseClient.cs" />
+    <Compile Include="Clients\Interfaces\Base\IBaseClient.cs" />
     <Compile Include="Clients\Identity\AccountClient.cs" />
     <Compile Include="Clients\Identity\IdentityUtilityClient.cs" />
     <Compile Include="Clients\Interfaces\Register\IRoleClient.cs" />
     <Compile Include="Clients\Interfaces\Register\IUserClient.cs" />
     <Compile Include="Clients\Interfaces\Registration\ICustomerClient.cs" />
+    <Compile Include="Clients\Interfaces\Registration\IProductClient.cs" />
     <Compile Include="Clients\Register\RoleClient.cs" />
     <Compile Include="Clients\Register\UserClient.cs" />
     <Compile Include="Clients\Registration\CustomerClient.cs" />
+    <Compile Include="Clients\Registration\ProductClient.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -224,7 +226,7 @@
     <Compile Include="Models\Identity\RegisterModel.cs" />
     <Compile Include="Models\Identity\ResetPasswordModel.cs" />
     <Compile Include="Models\Identity\ResponseErrorLogin.cs" />
-    <Compile Include="Models\Identity\ResponseLoginModel.cs" />
+    <Compile Include="Models\Identity\ResponseAuthModel.cs" />
     <Compile Include="Models\Identity\ReturnVerifyCodeModel.cs" />
     <Compile Include="Models\Identity\SendCodeModel.cs" />
     <Compile Include="Models\Identity\TokenModel.cs" />
@@ -233,16 +235,17 @@
     <Compile Include="Models\Register\UserModel.cs" />
     <Compile Include="Models\Registration\CustomerAddressModel.cs" />
     <Compile Include="Models\Registration\CustomerModel.cs" />
+    <Compile Include="Models\Registration\ProductCategoryModel.cs" />
+    <Compile Include="Models\Registration\ProductModel.cs" />
     <Compile Include="Models\Tables\Base\TableBase.cs" />
     <Compile Include="Models\Tables\Register\RoleTableModel.cs" />
     <Compile Include="Models\Tables\Register\UserTableModel.cs" />
     <Compile Include="Models\Tables\Registration\CustomerTableModel.cs" />
+    <Compile Include="Models\Tables\Registration\ProductTableModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\font-awesome.css" />
-    <Content Include="Content\font-awesome.min.css" />
     <Content Include="Content\libraries\admin-lte\AdminLTE.css" />
     <Content Include="Content\libraries\admin-lte\AdminLTE.min.css" />
     <Content Include="Content\libraries\admin-lte\alt\AdminLTE-bootstrap-social.css" />
@@ -443,8 +446,6 @@
     <Content Include="Content\libraries\bootstrap\bootstrap.min.css" />
     <Content Include="Content\libraries\font-awesome.css" />
     <Content Include="Content\libraries\font-awesome.min.css" />
-    <Content Include="fonts\fontawesome-webfont.svg" />
-    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Content\Images\Profile\user.png" />
     <Content Include="Content\libraries\bootstrap-datepicker\bootstrap-datepicker.css" />
     <Content Include="Content\libraries\bootstrap-datepicker\bootstrap-datepicker.min.css" />
@@ -582,15 +583,6 @@
     <Content Include="Scripts\libraries\bootstrap\bootstrap.min.js" />
     <Content Include="NLog.config" />
     <Content Include="Areas\Register\Views\web.config" />
-    <Content Include="fonts\fontawesome-webfont.eot" />
-    <Content Include="fonts\fontawesome-webfont.ttf" />
-    <Content Include="fonts\fontawesome-webfont.woff" />
-    <Content Include="fonts\fontawesome-webfont.woff2" />
-    <Content Include="fonts\FontAwesome.otf" />
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="Content\libraries\bootstrap-datepicker\bootstrap-datepicker.css.map" />
     <Content Include="Content\libraries\bootstrap-datepicker\bootstrap-datepicker.standalone.css.map" />
     <Content Include="Content\libraries\bootstrap-datepicker\bootstrap-datepicker3.css.map" />
@@ -744,7 +736,6 @@
     <Content Include="Views\Account\ForgotPassword.cshtml" />
     <Content Include="Views\Shared\_Footer.cshtml" />
     <Content Include="Views\Shared\_ModalWarning.cshtml" />
-    <Content Include="Views\Shared\_ModalBoxArt.cshtml" />
     <Content Include="Views\Shared\_ModalError.cshtml" />
     <Content Include="Views\Shared\_ModalSuccess.cshtml" />
     <Content Include="Views\Shared\_ReturnMessages.cshtml" />

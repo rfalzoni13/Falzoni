@@ -45,14 +45,14 @@ namespace Falzoni.Presentation.Administrator.Clients.Identity
                     options.IsPersistent = true;
                     options.ExpiresUtc = token.Expire;
 
-                    var claims = new[]
+                    Claim[] claims = new[]
                     {
-                            new Claim(ClaimTypes.NameIdentifier, token.UserId),
-                            new Claim(ClaimTypes.Role, token.RoleId),
-                            new Claim(ClaimTypes.Expiration, token.Expire.ToString()),
-                            new Claim("AccessToken", token.AccessToken),
-                            new Claim("RefreshToken",token.RefreshToken),
-                        };
+                        new Claim(ClaimTypes.NameIdentifier, token.UserId),
+                        new Claim(ClaimTypes.Role, token.RoleId),
+                        new Claim(ClaimTypes.Expiration, token.Expire.ToString()),
+                        new Claim("AccessToken", token.AccessToken),
+                        new Claim("RefreshToken",token.RefreshToken),
+                    };
 
                     var identity = new ClaimsIdentity(claims, "ApplicationCookie");
 
@@ -81,7 +81,7 @@ namespace Falzoni.Presentation.Administrator.Clients.Identity
                 {
                         new KeyValuePair<string, string>("grant_type", "refresh_token"),
                         new KeyValuePair<string, string>("refresh_token", refreshToken)
-                    });
+                });
 
                 HttpResponseMessage response = await httpClient.PostAsync(url, content);
                 if (response.IsSuccessStatusCode)
