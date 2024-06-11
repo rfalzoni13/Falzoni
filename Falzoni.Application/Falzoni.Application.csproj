@@ -96,10 +96,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ServiceApplication\Identity\AccountServiceApplication.cs" />
     <Compile Include="ServiceApplication\Identity\IdentityUtilityServiceApplication.cs" />
-    <Compile Include="ServiceApplication\Register\RoleServiceApplication.cs" />
-    <Compile Include="ServiceApplication\Register\UserServiceApplication.cs" />
-    <Compile Include="ServiceApplication\Registration\CustomerServiceApplication.cs" />
-    <Compile Include="ServiceApplication\Registration\ProductServiceApplication.cs" />
+    <Compile Include="ServiceApplication\Configuration\RoleServiceApplication.cs" />
+    <Compile Include="ServiceApplication\Configuration\UserServiceApplication.cs" />
+    <Compile Include="ServiceApplication\Register\CustomerServiceApplication.cs" />
+    <Compile Include="ServiceApplication\Register\ProductServiceApplication.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

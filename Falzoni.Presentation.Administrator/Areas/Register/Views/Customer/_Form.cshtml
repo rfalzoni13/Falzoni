@@ -10,15 +10,15 @@
     </h1>
     <ol class="breadcrumb">
         <li><a href="@Url.Action("Index", "Home", new { Area = string.Empty })"><i class="glyphicon glyphicon-home"></i> Home</a></li>
-        <li><a href="@Url.Action("Index", "Cliente", new { area = "Cadastro" } )"><i class="glyphicon glyphicon-edit"></i> @ViewContext.RouteData.DataTokens["area"]</a></li>
-        <li><a href="@Url.Action("Index", "Cliente", new { area = "Cadastro" } )"><i class="fa fa-user"></i> @ViewContext.RouteData.GetRequiredString("controller")</a></li>
-        <li class="active"><i class="fa fa-plus-square"></i> @action</li>
+        <li><a href="@Url.Action("Index", "Cliente", new { area = "Register" } )"><i class="glyphicon glyphicon-edit"></i> Cadastro</a></li>
+        <li><a href="@Url.Action("Index", "Cliente", new { area = "Register" } )"><i class="fa fa-user"></i> Cliente</a></li>
+        <li class="active"><i class="fa fa-plus-square"></i> @(action == "Create" ? "Novo" : "Editar")</li>
     </ol>
 </section><!--section -->
 
 <section class="content container-fluid">
     <div class="col-12">
-        @using (Html.BeginForm(action, "Cliente", new { Area = "Cadastro" }, FormMethod.Post, new { @class = "form-customer", enctype = "multipart/form-data" }))
+        @using (Html.BeginForm(action, "Cliente", new { Area = "Register" }, FormMethod.Post, new { @class = "form-customer", enctype = "multipart/form-data" }))
         {
             <div class="box box-primary">
                 <div class="box-header with-border">

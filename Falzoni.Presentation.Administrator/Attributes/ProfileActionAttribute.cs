@@ -5,9 +5,9 @@ using System.Web;
 using System;
 using System.Web.Mvc;
 using System.Web.Routing;
-using Falzoni.Presentation.Administrator.Clients.Interfaces.Register;
+using Falzoni.Presentation.Administrator.Clients.Interfaces.Configuration;
+using Falzoni.Presentation.Administrator.Models.Configuration;
 using System.Linq;
-using Falzoni.Presentation.Administrator.Models.Register;
 
 namespace Falzoni.Presentation.Administrator.Attributes
 {

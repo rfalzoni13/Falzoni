@@ -99,3 +99,14 @@
 2024-04-23 18:14:42.2051|ERROR|Falzoni.Presentation.Administrator.Areas.Register.Controllers.UserController|6|Ocorreu um erro: System.ApplicationException: Não foram encontrados recursos HTTP que correspondam ao URI de solicitação 'https://localhost:44367/Api/User/Edit'.
    em Falzoni.Presentation.Administrator.Clients.Register.UserClient.Update(String url, UserModel obj) na F:\Users\Renato Falzoni\Documents\Pessoal\Projetos\Falzoni\Falzoni.Presentation.Administrator\Clients\Register\UserClient.cs:linha 132
    em Falzoni.Presentation.Administrator.Areas.Register.Controllers.UserController.Edit(UserModel model) na F:\Users\Renato Falzoni\Documents\Pessoal\Projetos\Falzoni\Falzoni.Presentation.Administrator\Areas\Register\Controllers\UserController.cs:linha 160|
+2024-06-10 18:56:45.1173|ERROR|Falzoni.Presentation.Administrator.Controllers.AccountController|5|Ocorreu um erro interno do servidor: System.Threading.Tasks.TaskCanceledException: Uma tarefa foi cancelada.
+   em System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   em Falzoni.Presentation.Administrator.Clients.Identity.AccountClient.<Login>d__0.MoveNext() na D:\Users\Renato\Documents\Pessoal\Projetos\C#\.NET Framework\Falzoni\Falzoni.Presentation.Administrator\Clients\Identity\AccountClient.cs:linha 35
+--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---
+   em System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   em System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   em Falzoni.Presentation.Administrator.Controllers.AccountController.<Login>d__5.MoveNext() na D:\Users\Renato\Documents\Pessoal\Projetos\C#\.NET Framework\Falzoni\Falzoni.Presentation.Administrator\Controllers\AccountController.cs:linha 53|

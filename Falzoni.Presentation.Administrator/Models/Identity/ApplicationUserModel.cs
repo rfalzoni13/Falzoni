@@ -1,5 +1,5 @@
 ﻿using Falzoni.Presentation.Administrator.Models.Common;
-using Falzoni.Presentation.Administrator.Models.Register;
+using Falzoni.Presentation.Administrator.Models.Configuration;
 using System;
 
 namespace Falzoni.Presentation.Administrator.Models.Identity

@@ -1,10 +1,10 @@
 ﻿falzoni.core.routes = falzoni.core.routes || {
     register: {
         user: {
-            index: "/Register/User",
-            loadTable: "/Register/User/LoadTable",
-            edit: "/Register/User/Edit",
-            delete: "/Register/User/Delete"
+            index: "/Configuration/User",
+            loadTable: "/Configuration/User/LoadTable",
+            edit: "/Configuration/User/Edit",
+            delete: "/Configuration/User/Delete"
         },
 
         customer: {

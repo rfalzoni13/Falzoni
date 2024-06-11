@@ -1,4 +1,4 @@
-﻿using Falzoni.Domain.Entities.Registration;
+﻿using Falzoni.Domain.Entities.Register;
 using Falzoni.Infra.Data.Context.MySql;
 using Falzoni.Infra.Data.Context.SqlServer;
 using Falzoni.Infra.Data.Identity;

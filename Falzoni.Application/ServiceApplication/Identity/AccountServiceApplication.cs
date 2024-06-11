@@ -1,11 +1,11 @@
 ﻿using Falzoni.Application.IdentityConfiguration;
 using Falzoni.Domain.DTO.Identity;
 using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
+using System;
 using System.Threading.Tasks;
 using System.Web;
-using System;
-using Microsoft.AspNet.Identity.Owin;
 
 namespace Falzoni.Application.ServiceApplication.Identity
 {

@@ -189,10 +189,10 @@
     <Compile Include="Attributes\CustomAuthorizeAttribute.cs" />
     <Compile Include="Controllers\Admin\Identity\AccountController.cs" />
     <Compile Include="Controllers\Admin\Identity\IdentityUtilityController.cs" />
-    <Compile Include="Controllers\Admin\Register\RoleController.cs" />
-    <Compile Include="Controllers\Admin\Register\UserController.cs" />
-    <Compile Include="Controllers\Admin\Registration\CustomerController.cs" />
-    <Compile Include="Controllers\Admin\Registration\ProductController.cs" />
+    <Compile Include="Controllers\Admin\Configuration\RoleController.cs" />
+    <Compile Include="Controllers\Admin\Configuration\UserController.cs" />
+    <Compile Include="Controllers\Admin\Register\CustomerController.cs" />
+    <Compile Include="Controllers\Admin\Register\ProductController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -210,10 +210,10 @@
     <Compile Include="Models\Identity\RemoveLoginBindingModel.cs" />
     <Compile Include="Models\Identity\SendCodeModel.cs" />
     <Compile Include="Models\Identity\VerifyCodeModel.cs" />
-    <Compile Include="Models\Registration\CustomerAddressModel.cs" />
-    <Compile Include="Models\Registration\CustomerModel.cs" />
-    <Compile Include="Models\Registration\ProductCategoryModel.cs" />
-    <Compile Include="Models\Registration\ProductModel.cs" />
+    <Compile Include="Models\Register\CustomerAddressModel.cs" />
+    <Compile Include="Models\Register\CustomerModel.cs" />
+    <Compile Include="Models\Register\ProductCategoryModel.cs" />
+    <Compile Include="Models\Register\ProductModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="Models\Common\StatusCodeModel.cs" />

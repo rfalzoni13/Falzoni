@@ -67,21 +67,21 @@
     <Compile Include="DTO\Identity\ReturnVerifyCodeDTO.cs" />
     <Compile Include="DTO\Identity\SendCodeDTO.cs" />
     <Compile Include="DTO\Identity\VerifyCodeDTO.cs" />
-    <Compile Include="DTO\Registration\CustomerAddressDTO.cs" />
-    <Compile Include="DTO\Registration\CustomerDTO.cs" />
-    <Compile Include="DTO\Registration\ProductCategoryDTO.cs" />
-    <Compile Include="DTO\Registration\ProductDTO.cs" />
+    <Compile Include="DTO\Register\CustomerAddressDTO.cs" />
+    <Compile Include="DTO\Register\CustomerDTO.cs" />
+    <Compile Include="DTO\Register\ProductCategoryDTO.cs" />
+    <Compile Include="DTO\Register\ProductDTO.cs" />
     <Compile Include="Entities\Base\BaseEntity.cs" />
-    <Compile Include="Entities\Registration\Customer.cs" />
-    <Compile Include="Entities\Registration\CustomerAddress.cs" />
-    <Compile Include="Entities\Registration\ProductCategory.cs" />
-    <Compile Include="Entities\Registration\Product.cs" />
+    <Compile Include="Entities\Register\Customer.cs" />
+    <Compile Include="Entities\Register\CustomerAddress.cs" />
+    <Compile Include="Entities\Register\ProductCategory.cs" />
+    <Compile Include="Entities\Register\Product.cs" />
     <Compile Include="Interfaces\Base\IBaseRepository.cs" />
     <Compile Include="Interfaces\Base\IUnitOfWork.cs" />
-    <Compile Include="Interfaces\Registration\ICustomerAddressRepository.cs" />
-    <Compile Include="Interfaces\Registration\ICustomerRepository.cs" />
-    <Compile Include="Interfaces\Registration\IProductCategoryRepository.cs" />
-    <Compile Include="Interfaces\Registration\IProductRepository.cs" />
+    <Compile Include="Interfaces\Register\ICustomerAddressRepository.cs" />
+    <Compile Include="Interfaces\Register\ICustomerRepository.cs" />
+    <Compile Include="Interfaces\Register\IProductCategoryRepository.cs" />
+    <Compile Include="Interfaces\Register\IProductRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

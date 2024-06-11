@@ -49,7 +49,7 @@ namespace Falzoni.Presentation.Administrator.Areas.Register.Controllers
         }
 
         //GET: Register/Customer/Create
-        [UserRegister]
+        [UserConfiguration]
         [HttpGet]
         public ActionResult Create()
         {
@@ -79,7 +79,7 @@ namespace Falzoni.Presentation.Administrator.Areas.Register.Controllers
         }
 
         // POST: Register/Customer/Create
-        [UserRegister]
+        [UserConfiguration]
         [HttpPost]
         public ActionResult Create(CustomerModel model)
         {
@@ -116,7 +116,7 @@ namespace Falzoni.Presentation.Administrator.Areas.Register.Controllers
         }
 
         // GET: Register/Customer/Edit
-        [UserRegister]
+        [UserConfiguration]
         [HttpGet]
         public async Task<ActionResult> Edit(string id)
         {
@@ -148,7 +148,7 @@ namespace Falzoni.Presentation.Administrator.Areas.Register.Controllers
 
         // POST: Register/Customer/Edit
         [HttpPost]
-        [UserRegister]
+        [UserConfiguration]
         public ActionResult Edit(CustomerModel model)
         {
             if (!ModelState.IsValid)
