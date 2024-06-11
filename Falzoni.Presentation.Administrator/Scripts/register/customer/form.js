@@ -288,12 +288,12 @@
                 falzoni.core.configurations.showLoading();
             },
             success: function (data) {
-                $("#Postal").val(data.postalCode);
-                $("#Street").val(data.addressName);
-                $("#Comp").val(data.complement);
-                $("#Region").val(data.neighborhood);
+                $("#Postal").val(data.cep);
+                $("#Street").val(data.logradouro);
+                $("#Comp").val(data.complemento);
+                $("#Region").val(data.bairro);
                 $("#District").val(data.localidade);
-                $("#UF").val(data.state);
+                $("#UF").val(data.uf);
 
                 falzoni.core.configurations.hideLoading();
             },
