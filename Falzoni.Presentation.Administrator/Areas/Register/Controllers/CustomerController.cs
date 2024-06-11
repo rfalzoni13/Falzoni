@@ -1,8 +1,8 @@
 ﻿using Falzoni.Presentation.Administrator.Attributes;
-using Falzoni.Presentation.Administrator.Clients.Interfaces.Registration;
+using Falzoni.Presentation.Administrator.Clients.Interfaces.Register;
 using Falzoni.Presentation.Administrator.Models.Common;
-using Falzoni.Presentation.Administrator.Models.Registration;
-using Falzoni.Presentation.Administrator.Models.Tables.Registration;
+using Falzoni.Presentation.Administrator.Models.Register;
+using Falzoni.Presentation.Administrator.Models.Tables.Register;
 using Falzoni.Utils.Helpers;
 using NLog;
 using System;

@@ -8,8 +8,8 @@ namespace Falzoni.Presentation.Administrator.App_Start
     using Falzoni.Presentation.Administrator.Clients.Identity;
     using Falzoni.Presentation.Administrator.Clients.Interfaces.Base;
     using Falzoni.Presentation.Administrator.Clients.Interfaces.Configuration;
-    using Falzoni.Presentation.Administrator.Clients.Interfaces.Registration;
-    using Falzoni.Presentation.Administrator.Clients.Registration;
+    using Falzoni.Presentation.Administrator.Clients.Interfaces.Register;
+    using Falzoni.Presentation.Administrator.Clients.Register;
     using Microsoft.Web.Infrastructure.DynamicModuleHelper;
     using Ninject;
     using Ninject.Web.Common;

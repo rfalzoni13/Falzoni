@@ -2,7 +2,7 @@
 using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace Falzoni.Presentation.Administrator.Models.Registration
+namespace Falzoni.Presentation.Administrator.Models.Register
 {
     public class CustomerAddressModel : BaseModel
     {

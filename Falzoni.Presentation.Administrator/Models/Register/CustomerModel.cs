@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel;
 using System.Web.Mvc;
 
-namespace Falzoni.Presentation.Administrator.Models.Registration
+namespace Falzoni.Presentation.Administrator.Models.Register
 {
     public class CustomerModel : BaseModel
     {

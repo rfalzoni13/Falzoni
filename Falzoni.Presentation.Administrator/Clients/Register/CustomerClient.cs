@@ -1,22 +1,24 @@
 ﻿using Falzoni.Presentation.Administrator.Clients.Base;
-using Falzoni.Presentation.Administrator.Clients.Interfaces.Registration;
-using Falzoni.Presentation.Administrator.Models.Registration;
-using Falzoni.Presentation.Administrator.Models.Tables.Registration;
+using Falzoni.Presentation.Administrator.Clients.Interfaces.Register;
+using Falzoni.Presentation.Administrator.Models.Register;
+using Falzoni.Presentation.Administrator.Models.Tables.Register;
 using Falzoni.Utils.Helpers;
 using System.Collections.Generic;
-using System.Linq;
 using System.Net.Http;
-using System.Threading.Tasks;
 using System;
+using System.Threading.Tasks;
+using System.Linq;
 using Falzoni.Presentation.Administrator.Models.Common;
 
-namespace Falzoni.Presentation.Administrator.Clients.Registration
+namespace Falzoni.Presentation.Administrator.Clients.Register
 {
-    public class ProductClient : BaseClient<ProductModel, ProductTableModel>, IProductClient
+    public class CustomerClient : BaseClient<CustomerModel, CustomerTableModel>, ICustomerClient
     {
-        public override async Task<ProductTableModel> GetTableAsync(string url)
+        public CustomerClient() :base() { }
+
+        public override async Task<CustomerTableModel> GetTableAsync(string url)
         {
-            var table = new ProductTableModel();
+            var table = new CustomerTableModel();
 
             try
             {
@@ -28,19 +30,19 @@ namespace Falzoni.Presentation.Administrator.Clients.Registration
 
                     if (response.IsSuccessStatusCode)
                     {
-                        var products = await response.Content.ReadAsAsync<ICollection<ProductModel>>();
+                        var customers = await response.Content.ReadAsAsync<ICollection<CustomerModel>>();
 
-                        foreach (var product in products)
+                        foreach (var customer in customers)
                         {
-                            table.data.Add(new ProductListTableModel()
+                            table.data.Add(new CustomerListTableModel()
                             {
-                                Id = product.Id,
-                                Name = product.Name,
-                                Category = product.Category.Name,
-                                Price = product.Price,
-                                Code = product.Code,
-                                Created = product.Created,
-                                Modified = product.Modified
+                                Id = customer.Id,
+                                Name = customer.Name,
+                                Document = customer.Document,
+                                Email = customer.Email,
+                                Gender = customer.Gender,
+                                Created = customer.Created,
+                                Modified = customer.Modified
                             });
                         }
 
@@ -49,7 +51,7 @@ namespace Falzoni.Presentation.Administrator.Clients.Registration
                     }
                     else
                     {
-                        if (response.StatusCode != System.Net.HttpStatusCode.NotFound)
+                        if(response.StatusCode != System.Net.HttpStatusCode.NotFound)
                         {
                             StatusCodeModel statusCode = response.Content.ReadAsAsync<StatusCodeModel>().Result;
 
