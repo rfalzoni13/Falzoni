@@ -17,8 +17,8 @@
     </h1>
     <ol class="breadcrumb">
         <li><a href="@Url.Action("Index", "Home", new { Area = string.Empty })"><i class="glyphicon glyphicon-home"></i> Home</a></li>
-        <li><a href="@Url.Action("Index", "Usuario", new { Area = "Configuration" } )"><i class="glyphicon glyphicon-cog"></i> Configurações</a></li>
-        <li><a href="@Url.Action("Index", "Usuario", new { Area = "Configuration" } )"><i class="fa fa-user"></i> Usuário</a></li>
+        <li><a href="@Url.Action("Index", "User", new { Area = "Configuration" } )"><i class="glyphicon glyphicon-cog"></i> Configurações</a></li>
+        <li><a href="@Url.Action("Index", "User", new { Area = "Configuration" } )"><i class="fa fa-user"></i> Usuário</a></li>
         <li class="active"><i class="fa fa-plus-square"></i> @(action == "Create" ? "Novo" : "Editar")</li>
     </ol>
 </section><!--section -->
@@ -29,7 +29,7 @@
             <div class="box-header with-border">
                 <h3 class="box-title">Dados cadastrais</h3>
             </div>
-            @using (Html.BeginForm(action, "Usuario", new { Area = "Configuration" }, FormMethod.Post, new { @class = "form-user", enctype = "multipart/form-data" }))
+            @using (Html.BeginForm(action, "User", new { Area = "Configuration" }, FormMethod.Post, new { @class = "form-user", enctype = "multipart/form-data" }))
             {
                 <div class="box-body">
                     @Html.Partial("_ReturnMessages")
