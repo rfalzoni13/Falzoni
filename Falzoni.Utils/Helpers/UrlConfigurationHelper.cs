@@ -57,6 +57,13 @@ namespace Falzoni.Utils.Helpers
         public static string CustomerDelete;
         #endregion
 
+        #region Product
+        public static string ProductGetAll;
+        public static string ProductGet;
+        public static string ProductCreate;
+        public static string ProductEdit;
+        public static string ProductDelete;
+        #endregion
 
         public static void SetUrlList()
         {
@@ -111,6 +118,15 @@ namespace Falzoni.Utils.Helpers
             CustomerEdit = $"{PathUrl}/{ConfigurationManager.AppSettings["CustomerUrl"]}/Update";
             CustomerDelete = $"{PathUrl}/{ConfigurationManager.AppSettings["CustomerUrl"]}/Delete";
             #endregion
+
+            #region Customer
+            CustomerGetAll = $"{PathUrl}/{ConfigurationManager.AppSettings["CustomerUrl"]}/GetAll";
+            CustomerGet = $"{PathUrl}/{ConfigurationManager.AppSettings["CustomerUrl"]}/Get";
+            CustomerCreate = $"{PathUrl}/{ConfigurationManager.AppSettings["CustomerUrl"]}/Create";
+            CustomerEdit = $"{PathUrl}/{ConfigurationManager.AppSettings["CustomerUrl"]}/Update";
+            CustomerDelete = $"{PathUrl}/{ConfigurationManager.AppSettings["CustomerUrl"]}/Delete";
+            #endregion
+
         }
 
     }
