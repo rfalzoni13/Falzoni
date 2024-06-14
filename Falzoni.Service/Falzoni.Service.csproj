@@ -111,7 +111,7 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Register\CustomerService.cs" />
-    <Compile Include="Register\ProductService.cs" />
+    <Compile Include="Stock\ProductService.cs" />
     <Compile Include="Senders\Email\EmailIdentityMessageService.cs" />
     <Compile Include="Senders\Sms\SmsTwilioMessageService.cs" />
   </ItemGroup>
