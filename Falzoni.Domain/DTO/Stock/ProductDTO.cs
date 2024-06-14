@@ -1,8 +1,9 @@
 ﻿using Falzoni.Domain.DTO.Base;
-using Falzoni.Domain.Entities.Register;
+using Falzoni.Domain.DTO.Register;
+using Falzoni.Domain.Entities.Stock;
 using System;
 
-namespace Falzoni.Domain.DTO.Register
+namespace Falzoni.Domain.DTO.Stock
 {
     public class ProductDTO : BaseDTO
     {

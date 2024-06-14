@@ -1,7 +1,8 @@
 ﻿using Falzoni.Domain.Entities.Base;
+using Falzoni.Domain.Entities.Register;
 using System;
 
-namespace Falzoni.Domain.Entities.Register
+namespace Falzoni.Domain.Entities.Stock
 {
     public class Product : BaseEntity
     {

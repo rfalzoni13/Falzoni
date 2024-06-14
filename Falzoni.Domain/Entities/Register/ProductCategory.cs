@@ -1,4 +1,5 @@
 ﻿using Falzoni.Domain.Entities.Base;
+using Falzoni.Domain.Entities.Stock;
 
 namespace Falzoni.Domain.Entities.Register
 {

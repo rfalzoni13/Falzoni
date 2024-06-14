@@ -1,7 +1,7 @@
-﻿using Falzoni.Domain.Entities.Register;
+﻿using Falzoni.Domain.Entities.Stock;
 using Falzoni.Domain.Interfaces.Base;
 
-namespace Falzoni.Domain.Interfaces.Register
+namespace Falzoni.Domain.Interfaces.Stock
 {
     public interface IProductRepository : IBaseRepository<Product>
     {
