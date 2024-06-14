@@ -1,8 +1,9 @@
 ﻿using Falzoni.Presentation.Administrator.Models.Base;
+using Falzoni.Presentation.Administrator.Models.Register;
 using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace Falzoni.Presentation.Administrator.Models.Register
+namespace Falzoni.Presentation.Administrator.Models.Stock
 {
     public class ProductModel : BaseModel
     {

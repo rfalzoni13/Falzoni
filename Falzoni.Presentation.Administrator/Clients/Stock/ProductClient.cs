@@ -1,7 +1,7 @@
 ﻿using Falzoni.Presentation.Administrator.Clients.Base;
-using Falzoni.Presentation.Administrator.Clients.Interfaces.Register;
-using Falzoni.Presentation.Administrator.Models.Register;
-using Falzoni.Presentation.Administrator.Models.Tables.Register;
+using Falzoni.Presentation.Administrator.Clients.Interfaces.Stock;
+using Falzoni.Presentation.Administrator.Models.Stock;
+using Falzoni.Presentation.Administrator.Models.Tables.Stock;
 using Falzoni.Utils.Helpers;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using System;
 using Falzoni.Presentation.Administrator.Models.Common;
 
-namespace Falzoni.Presentation.Administrator.Clients.Register
+namespace Falzoni.Presentation.Administrator.Clients.Stock
 {
     public class ProductClient : BaseClient<ProductModel, ProductTableModel>, IProductClient
     {

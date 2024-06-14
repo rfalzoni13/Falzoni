@@ -187,6 +187,8 @@
     <Compile Include="Areas\Configuration\Controllers\UserController.cs" />
     <Compile Include="Areas\Register\Controllers\CustomerController.cs" />
     <Compile Include="Areas\Register\RegisterAreaRegistration.cs" />
+    <Compile Include="Areas\Stock\Controllers\ProductController.cs" />
+    <Compile Include="Areas\Stock\StockAreaRegistration.cs" />
     <Compile Include="Attributes\CustomActionAttribute.cs" />
     <Compile Include="Attributes\ProfileActionAttribute.cs" />
     <Compile Include="Attributes\UserConfigurationAttribute.cs" />
@@ -197,11 +199,11 @@
     <Compile Include="Clients\Interfaces\Configuration\IRoleClient.cs" />
     <Compile Include="Clients\Interfaces\Configuration\IUserClient.cs" />
     <Compile Include="Clients\Interfaces\Register\ICustomerClient.cs" />
-    <Compile Include="Clients\Interfaces\Register\IProductClient.cs" />
+    <Compile Include="Clients\Interfaces\Stock\IProductClient.cs" />
     <Compile Include="Clients\Configuration\RoleClient.cs" />
     <Compile Include="Clients\Configuration\UserClient.cs" />
     <Compile Include="Clients\Register\CustomerClient.cs" />
-    <Compile Include="Clients\Register\ProductClient.cs" />
+    <Compile Include="Clients\Stock\ProductClient.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -237,12 +239,12 @@
     <Compile Include="Models\Register\CustomerAddressModel.cs" />
     <Compile Include="Models\Register\CustomerModel.cs" />
     <Compile Include="Models\Register\ProductCategoryModel.cs" />
-    <Compile Include="Models\Register\ProductModel.cs" />
+    <Compile Include="Models\Stock\ProductModel.cs" />
     <Compile Include="Models\Tables\Base\TableBase.cs" />
     <Compile Include="Models\Tables\Configuration\RoleTableModel.cs" />
     <Compile Include="Models\Tables\Configuration\UserTableModel.cs" />
     <Compile Include="Models\Tables\Register\CustomerTableModel.cs" />
-    <Compile Include="Models\Tables\Register\ProductTableModel.cs" />
+    <Compile Include="Models\Tables\Stock\ProductTableModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -291,6 +293,7 @@
     <Content Include="Areas\Configuration\Views\User\_Scripts.cshtml" />
     <Content Include="Areas\Configuration\Views\User\_Styles.cshtml" />
     <Content Include="Areas\Configuration\Views\User\_ModalPhoto.cshtml" />
+    <Content Include="Areas\Stock\Views\web.config" />
     <None Include="Scripts\libraries\jquery\jquery-3.7.1.intellisense.js" />
     <Content Include="Scripts\libraries\jquery\jquery-3.7.1.js" />
     <Content Include="Scripts\libraries\jquery\jquery-3.7.1.min.js" />
@@ -747,6 +750,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Stock\Views\Product\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

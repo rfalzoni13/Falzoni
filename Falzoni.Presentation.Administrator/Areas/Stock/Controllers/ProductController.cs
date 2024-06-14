@@ -1,7 +1,7 @@
-﻿using Falzoni.Presentation.Administrator.Clients.Interfaces.Register;
+﻿using Falzoni.Presentation.Administrator.Clients.Interfaces.Stock;
 using Falzoni.Presentation.Administrator.Models.Common;
-using Falzoni.Presentation.Administrator.Models.Register;
-using Falzoni.Presentation.Administrator.Models.Tables.Register;
+using Falzoni.Presentation.Administrator.Models.Stock;
+using Falzoni.Presentation.Administrator.Models.Tables.Stock;
 using Falzoni.Utils.Helpers;
 using NLog;
 using System;
@@ -10,34 +10,34 @@ using System.Net;
 using System.Threading.Tasks;
 using System.Web.Mvc;
 
-namespace Falzoni.Presentation.Administrator.Areas.Register.Controllers
+namespace Falzoni.Presentation.Administrator.Areas.Stock.Controllers
 {
     [Authorize]
-    public class CustomerController : Controller
+    public class ProductController : Controller
     {
-        private readonly ICustomerClient _customerClient;
+        private readonly IProductClient _productClient;
         private static readonly Logger _logger = LogManager.GetCurrentClassLogger();
 
-        public CustomerController(ICustomerClient customerClient)
+        public ProductController(IProductClient productClient)
         {
-            _customerClient = customerClient;
+            _productClient = productClient;
         }
 
-        // GET: Register/Customer
+        // GET: Stock/Product
         public ActionResult Index()
         {
             return View();
         }
 
-        //GET: Register/Customer/LoadTable
+        //GET: Stock/Product/LoadTable
         [HttpGet]
         public async Task<JsonResult> LoadTable()
         {
-            var table = new CustomerTableModel();
+            var table = new ProductTableModel();
 
             try
             {
-                table = await _customerClient.GetTableAsync(UrlConfigurationHelper.CustomerGetAll);
+                table = await _productClient.GetTableAsync(UrlConfigurationHelper.ProductGetAll);
             }
             catch (Exception ex)
             {
@@ -47,11 +47,11 @@ namespace Falzoni.Presentation.Administrator.Areas.Register.Controllers
             return Json(table, JsonRequestBehavior.AllowGet);
         }
 
-        //GET: Register/Customer/Create
+        //GET: Stock/Product/Create
         [HttpGet]
         public ActionResult Create()
         {
-            var model = new CustomerModel();
+            var model = new ProductModel();
 
             try
             {
@@ -76,9 +76,9 @@ namespace Falzoni.Presentation.Administrator.Areas.Register.Controllers
             }
         }
 
-        // POST: Register/Customer/Create
+        // POST: Stock/Product/Create
         [HttpPost]
-        public ActionResult Create(CustomerModel model)
+        public ActionResult Create(ProductModel model)
         {
             if (!ModelState.IsValid)
             {
@@ -87,7 +87,7 @@ namespace Falzoni.Presentation.Administrator.Areas.Register.Controllers
 
             try
             {
-                string result = _customerClient.Add(UrlConfigurationHelper.CustomerCreate, model);
+                string result = _productClient.Add(UrlConfigurationHelper.ProductCreate, model);
 
                 TempData["Return"] = new ReturnModel
                 {
@@ -112,13 +112,13 @@ namespace Falzoni.Presentation.Administrator.Areas.Register.Controllers
             }
         }
 
-        // GET: Register/Customer/Edit
+        // GET: Stock/Product/Edit
         [HttpGet]
         public async Task<ActionResult> Edit(string id)
         {
             try
             {
-                var model = await _customerClient.GetAsync(UrlConfigurationHelper.CustomerGet, id);
+                var model = await _productClient.GetAsync(UrlConfigurationHelper.ProductGet, id);
 
                 return View(model);
             }
@@ -142,9 +142,9 @@ namespace Falzoni.Presentation.Administrator.Areas.Register.Controllers
 
         }
 
-        // POST: Register/Customer/Edit
+        // POST: Stock/Product/Edit
         [HttpPost]
-        public ActionResult Edit(CustomerModel model)
+        public ActionResult Edit(ProductModel model)
         {
             if (!ModelState.IsValid)
             {
@@ -153,7 +153,7 @@ namespace Falzoni.Presentation.Administrator.Areas.Register.Controllers
 
             try
             {
-                string result = _customerClient.Update(UrlConfigurationHelper.CustomerEdit, model);
+                string result = _productClient.Update(UrlConfigurationHelper.ProductEdit, model);
 
                 TempData["Return"] = new ReturnModel
                 {
@@ -178,15 +178,15 @@ namespace Falzoni.Presentation.Administrator.Areas.Register.Controllers
             }
         }
 
-        //POST: Register/Customer/Delete
+        //POST: Stock/Product/Delete
         [HttpPost]
-        public async Task<ActionResult> Delete(CustomerModel model)
+        public async Task<ActionResult> Delete(ProductModel model)
         {
             //List<string> errorsList = new List<string>();
 
             try
             {
-                string result = await _customerClient.DeleteAsync(UrlConfigurationHelper.CustomerDelete, model);
+                string result = await _productClient.DeleteAsync(UrlConfigurationHelper.ProductDelete, model);
 
                 return Json(new { success = true, message = result });
             }

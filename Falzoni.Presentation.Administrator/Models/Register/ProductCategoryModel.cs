@@ -1,4 +1,5 @@
 ﻿using Falzoni.Presentation.Administrator.Models.Base;
+using Falzoni.Presentation.Administrator.Models.Stock;
 
 namespace Falzoni.Presentation.Administrator.Models.Register
 {
