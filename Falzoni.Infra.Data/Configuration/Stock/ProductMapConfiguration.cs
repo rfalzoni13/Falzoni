@@ -1,7 +1,7 @@
-﻿using Falzoni.Domain.Entities.Register;
+﻿using Falzoni.Domain.Entities.Stock;
 using System.Data.Entity.ModelConfiguration;
 
-namespace Falzoni.Infra.Data.Configuration.Register
+namespace Falzoni.Infra.Data.Configuration.Stock
 {
     public class ProductMapConfiguration : EntityTypeConfiguration<Product>
     {

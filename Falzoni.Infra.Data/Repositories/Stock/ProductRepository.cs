@@ -1,8 +1,8 @@
-﻿using Falzoni.Domain.Entities.Register;
-using Falzoni.Domain.Interfaces.Register;
+﻿using Falzoni.Domain.Entities.Stock;
+using Falzoni.Domain.Interfaces.Stock;
 using Falzoni.Infra.Data.Repositories.Base;
 
-namespace Falzoni.Infra.Data.Repositories.Register
+namespace Falzoni.Infra.Data.Repositories.Stock
 {
     public class ProductRepository : BaseRepository<Product>, IProductRepository
     {
