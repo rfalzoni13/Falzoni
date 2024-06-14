@@ -1,8 +1,9 @@
-﻿using Falzoni.Domain.DTO.Register;
+﻿using Falzoni.Domain.DTO.Stock;
 using Falzoni.Presentation.Api.Models.Base;
+using Falzoni.Presentation.Api.Models.Register;
 using System;
 
-namespace Falzoni.Presentation.Api.Models.Register
+namespace Falzoni.Presentation.Api.Models.Stock
 {
     public class ProductModel : BaseModel
     {

@@ -1,5 +1,7 @@
 ﻿using Falzoni.Domain.DTO.Register;
+using Falzoni.Domain.DTO.Stock;
 using Falzoni.Presentation.Api.Models.Base;
+using Falzoni.Presentation.Api.Models.Stock;
 
 namespace Falzoni.Presentation.Api.Models.Register
 {
