@@ -1,11 +1,11 @@
-﻿using Falzoni.Domain.DTO.Register;
+﻿using Falzoni.Domain.DTO.Stock;
 using Falzoni.Domain.Interfaces.Base;
-using Falzoni.Domain.Interfaces.Register;
+using Falzoni.Domain.Interfaces.Stock;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Falzoni.Service.Register
+namespace Falzoni.Service.Stock
 {
     public class ProductService
     {

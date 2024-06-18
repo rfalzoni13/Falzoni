@@ -1,9 +1,9 @@
-﻿using Falzoni.Service.Register;
-using Falzoni.Domain.DTO.Register;
+﻿using Falzoni.Service.Stock;
+using Falzoni.Domain.DTO.Stock;
 using System.Collections.Generic;
 using System;
 
-namespace Falzoni.Application.ServiceApplication.Register
+namespace Falzoni.Application.ServiceApplication.Stock
 {
     public class ProductServiceApplication
     {

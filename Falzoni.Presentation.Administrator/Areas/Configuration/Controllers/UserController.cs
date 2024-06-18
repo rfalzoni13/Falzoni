@@ -147,8 +147,8 @@ namespace Falzoni.Presentation.Administrator.Areas.Configuration.Controllers
         }
 
         // POST: Configuration/User/Edit
-        [HttpPost]
         [UserConfiguration]
+        [HttpPost]
         public ActionResult Edit(UserModel model)
         {
             if (!ModelState.IsValid)

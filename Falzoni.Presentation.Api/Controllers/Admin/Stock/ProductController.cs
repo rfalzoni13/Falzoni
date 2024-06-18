@@ -1,19 +1,18 @@
-﻿using Falzoni.Application.ServiceApplication.Register;
-using Falzoni.Presentation.Api.Models.Register;
-using Falzoni.Presentation.Api.Attributes;
+﻿using Falzoni.Application.ServiceApplication.Stock;
+using Falzoni.Presentation.Api.Models.Stock;
 using Falzoni.Presentation.Api.Utils;
 using NLog;
-using System;
-using System.Linq;
-using System.Net;
 using System.Net.Http;
+using System.Net;
+using System;
 using System.Web.Http;
+using System.Linq;
+using Falzoni.Presentation.Api.Attributes;
 
-namespace Falzoni.Presentation.Api.Controllers.Admin.Register
+namespace Falzoni.Presentation.Api.Controllers.Admin.Stock
 {
     [CustomAuthorize(Roles = "Administrator")]
     [RoutePrefix("Api/Product")]
-
     public class ProductController : ApiController
     {
         #region Attributes
@@ -346,8 +345,8 @@ namespace Falzoni.Presentation.Api.Controllers.Admin.Register
         /// <param name="model">Objeto de registro do produto</param>
         /// <returns></returns>
         // DELETE Api/Product/Delete
-       [HttpDelete]
-       [Route("Delete")]
+        [HttpDelete]
+        [Route("Delete")]
         public HttpResponseMessage Delete([FromBody] ProductModel model)
         {
             string action = this.ActionContext.ActionDescriptor.ActionName;
@@ -420,6 +419,5 @@ namespace Falzoni.Presentation.Api.Controllers.Admin.Register
         //    }
         //}
         #endregion
-
     }
 }

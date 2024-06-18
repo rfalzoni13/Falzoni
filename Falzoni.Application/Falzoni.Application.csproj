@@ -99,7 +99,7 @@
     <Compile Include="ServiceApplication\Configuration\RoleServiceApplication.cs" />
     <Compile Include="ServiceApplication\Configuration\UserServiceApplication.cs" />
     <Compile Include="ServiceApplication\Register\CustomerServiceApplication.cs" />
-    <Compile Include="ServiceApplication\Register\ProductServiceApplication.cs" />
+    <Compile Include="ServiceApplication\Stock\ProductServiceApplication.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

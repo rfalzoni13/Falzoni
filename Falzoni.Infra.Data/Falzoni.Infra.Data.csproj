@@ -116,7 +116,7 @@
     <Compile Include="Configuration\Register\CustomerAddressMapConfiguration.cs" />
     <Compile Include="Configuration\Register\CustomerMapConfiguration.cs" />
     <Compile Include="Configuration\Register\ProductCategoryMapConfiguration.cs" />
-    <Compile Include="Configuration\Register\ProductMapConfiguration.cs" />
+    <Compile Include="Configuration\Stock\ProductMapConfiguration.cs" />
     <Compile Include="Context\FalzoniContext.cs" />
     <Compile Include="Context\MySql\FalzoniMySqlContext.cs" />
     <Compile Include="Context\SqlServer\FalzoniSqlServerContext.cs" />
@@ -128,7 +128,7 @@
     <Compile Include="Repositories\Register\CustomerAddressRepository.cs" />
     <Compile Include="Repositories\Register\CustomerRepository.cs" />
     <Compile Include="Repositories\Register\ProductCategoryRepository.cs" />
-    <Compile Include="Repositories\Register\ProductRepository.cs" />
+    <Compile Include="Repositories\Stock\ProductRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Falzoni.Domain\Falzoni.Domain.csproj">

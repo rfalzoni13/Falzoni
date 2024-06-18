@@ -2,7 +2,7 @@
 using Falzoni.Presentation.Administrator.Models.Tables.Base;
 using System.Collections.Generic;
 
-namespace Falzoni.Presentation.Administrator.Models.Tables.Register
+namespace Falzoni.Presentation.Administrator.Models.Tables.Stock
 {
     public class ProductTableModel : TableBase
     {

@@ -11,6 +11,10 @@ using Falzoni.Service.Register;
 using Falzoni.Utils.Helpers;
 using System.Data.Entity;
 using Unity;
+using Falzoni.Domain.Interfaces.Stock;
+using Falzoni.Infra.Data.Repositories.Stock;
+using Falzoni.Service.Stock;
+using Falzoni.Application.ServiceApplication.Stock;
 
 namespace Falzoni.Infra.IoC
 {

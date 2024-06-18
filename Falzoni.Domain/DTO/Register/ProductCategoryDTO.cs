@@ -1,5 +1,7 @@
 ﻿using Falzoni.Domain.DTO.Base;
+using Falzoni.Domain.DTO.Stock;
 using Falzoni.Domain.Entities.Register;
+using Falzoni.Domain.Entities.Stock;
 using System;
 
 namespace Falzoni.Domain.DTO.Register
