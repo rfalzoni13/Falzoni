@@ -120,4 +120,7 @@
   <data name="Enter" xml:space="preserve">
     <value>Regístrate</value>
   </data>
+  <data name="Send" xml:space="preserve">
+    <value>Enviar</value>
+  </data>
 </root>

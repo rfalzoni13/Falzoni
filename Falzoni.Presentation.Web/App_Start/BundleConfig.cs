@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Optimization;
+﻿using System.Web.Optimization;
 using System.Web.UI;
 
 namespace Falzoni.Presentation.Web
@@ -33,8 +29,8 @@ namespace Falzoni.Presentation.Web
 
             // Use a versão de Desenvolvimento do Modernizr para se desenvolver e aprender com ele. Em seguida, quando estiver
             // pronto para a produção, utilize a ferramenta de build em https://modernizr.com para escolher somente os testes que precisa
-            bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
-                            "~/Scripts/Libraries/modernizr-*"));
+            //bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
+            //                "~/Scripts/Libraries/modernizr-*"));
         }
 
         public static void RegisterJQueryScriptManager()
@@ -42,10 +38,10 @@ namespace Falzoni.Presentation.Web
             ScriptManager.ScriptResourceMapping.AddDefinition("jquery",
                 new ScriptResourceDefinition
                 {
-                    Path = "~/scripts/libraries/jquery/jquery-3.7.1.min.js",
-                    DebugPath = "~/scripts/libraries/jquery/jquery-3.7.1.js",
-                    CdnPath = "http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.7.0.min.js",
-                    CdnDebugPath = "http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.7.0.js"
+                    Path = "~/scripts/libraries/jquery/jquery-3.7.0.min.js",
+                    DebugPath = "~/scripts/libraries/jquery/jquery-3.7.0.js",
+                    CdnPath = "http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.7.1.min.js",
+                    CdnDebugPath = "http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.7.1.js"
                 });
         }
     }

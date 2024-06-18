@@ -110,3 +110,14 @@
    em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
    em System.Runtime.CompilerServices.TaskAwaiter.GetResult()
    em Falzoni.Presentation.Administrator.Controllers.AccountController.<Login>d__5.MoveNext() na D:\Users\Renato\Documents\Pessoal\Projetos\C#\.NET Framework\Falzoni\Falzoni.Presentation.Administrator\Controllers\AccountController.cs:linha 53|
+2024-06-17 16:18:41.3663|ERROR|Falzoni.Presentation.Administrator.Controllers.AccountController|9|Ocorreu um erro interno do servidor: System.Threading.Tasks.TaskCanceledException: Uma tarefa foi cancelada.
+   em System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   em Falzoni.Presentation.Administrator.Clients.Identity.AccountClient.<Login>d__0.MoveNext() na F:\Users\Renato Falzoni\Documents\Pessoal\Projetos\C#\.NET Framework\Falzoni\Falzoni.Presentation.Administrator\Clients\Identity\AccountClient.cs:linha 35
+--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---
+   em System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   em System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   em Falzoni.Presentation.Administrator.Controllers.AccountController.<Login>d__5.MoveNext() na F:\Users\Renato Falzoni\Documents\Pessoal\Projetos\C#\.NET Framework\Falzoni\Falzoni.Presentation.Administrator\Controllers\AccountController.cs:linha 53|

@@ -95,29 +95,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\fonts\fontawesome-webfont.svg" />
     <Content Include="Content\Images\LogoAntiguera.png" />
-    <Content Include="Content\Libraries\bootstrap\bootstrap-theme.css" />
-    <Content Include="Content\Libraries\bootstrap\bootstrap-theme.min.css" />
-    <Content Include="Content\Libraries\bootstrap\bootstrap.css" />
-    <Content Include="Content\Libraries\bootstrap\bootstrap.min.css" />
-    <Content Include="Content\Libraries\font-awesome.css" />
-    <Content Include="Content\Libraries\font-awesome.min.css" />
-    <Content Include="Content\Libraries\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Content\Pages\Default.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
-    <Content Include="Scripts\Libraries\bootstrap\bootstrap.js" />
-    <Content Include="Scripts\Libraries\bootstrap\bootstrap.min.js" />
-    <Content Include="Scripts\Libraries\bootstrap\npm.js" />
-    <None Include="Scripts\Libraries\jquery\jquery-3.7.1.intellisense.js" />
     <Content Include="Scripts\Libraries\jquery\jquery-3.7.1.js" />
     <Content Include="Scripts\Libraries\jquery\jquery-3.7.1.min.js" />
-    <Content Include="Scripts\Libraries\jquery\jquery-3.7.1.slim.js" />
-    <Content Include="Scripts\Libraries\jquery\jquery-3.7.1.slim.min.js" />
-    <Content Include="Scripts\Libraries\modernizr-2.8.3.js" />
     <Content Include="Scripts\WebForms\DetailsView.js" />
     <Content Include="Scripts\WebForms\Focus.js" />
     <Content Include="Scripts\WebForms\GridView.js" />
@@ -185,28 +170,19 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\fonts\fontawesome-webfont.eot" />
-    <Content Include="Content\fonts\fontawesome-webfont.ttf" />
-    <Content Include="Content\fonts\fontawesome-webfont.woff" />
-    <Content Include="Content\fonts\fontawesome-webfont.woff2" />
-    <Content Include="Content\fonts\FontAwesome.otf" />
-    <Content Include="Content\Libraries\bootstrap\bootstrap-theme.css.map" />
-    <Content Include="Content\Libraries\bootstrap\bootstrap-theme.min.css.map" />
-    <Content Include="Content\Libraries\bootstrap\bootstrap.css.map" />
-    <Content Include="Content\Libraries\bootstrap\bootstrap.min.css.map" />
-    <Content Include="Content\Libraries\fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="Content\Libraries\fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="Content\Libraries\fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="Content\Libraries\fonts\glyphicons-halflings-regular.woff2" />
     <None Include="packages.config" />
-    <Content Include="Scripts\Libraries\jquery\jquery-3.7.1.min.map" />
-    <Content Include="Scripts\Libraries\jquery\jquery-3.7.1.slim.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Falzoni.Utils\Falzoni.Utils.csproj">
+      <Project>{c5f05b16-7fca-4a0f-aaf2-3c407854d94b}</Project>
+      <Name>Falzoni.Utils</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

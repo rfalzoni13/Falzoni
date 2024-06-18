@@ -13,7 +13,10 @@ namespace Falzoni.Presentation.Administrator
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
-            BundleConfig.RegisterBundles(BundleTable.Bundles);
+            if(Falzoni.Utils.Helpers.ConfigurationHelper.IsBundleled)
+            {
+                BundleConfig.RegisterBundles(BundleTable.Bundles);
+            }
             AntiForgeryConfig.UniqueClaimTypeIdentifier = ClaimTypes.NameIdentifier;
         }
     }

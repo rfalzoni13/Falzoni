@@ -9,11 +9,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%: Page.Title %> - Meu aplicativo ASP.NET</title>
 
-    <asp:PlaceHolder runat="server">
-        <%: Scripts.Render("~/bundles/modernizr") %>
-    </asp:PlaceHolder>
+      <%if (Falzoni.Utils.Helpers.ConfigurationHelper.IsBundleled)
+      {%>
+            <webopt:bundlereference runat="server" path="~/Content/css" />
+      <%}
+      else 
+      {%>
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+          <link rel="stylesheet" href="/Content/Site.css" />
+      <%}%>
 
-    <webopt:bundlereference runat="server" path="~/Content/css" />
+
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
     <asp:ContentPlaceHolder ID="CssContent" runat="server">
@@ -85,8 +92,14 @@
     </div>
 
     </form>
-    <asp:PlaceHolder runat="server">
-        <%: Scripts.Render("~/Scripts/Libraries/bootstrap/bootstrap.js") %>
-    </asp:PlaceHolder>
-</body>
+<asp:PlaceHolder runat="server">
+    <%if (Falzoni.Utils.Helpers.ConfigurationHelper.IsBundleled)
+    {%>
+        <%:Scripts.Render("~/Scripts/Libraries/bootstrap/bootstrap.js")%>
+    <%}
+    else
+    {%>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+    <%}%>
+</asp:PlaceHolder></body>
 </html>

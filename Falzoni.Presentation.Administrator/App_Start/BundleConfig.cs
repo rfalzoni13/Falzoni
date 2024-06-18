@@ -54,6 +54,7 @@ namespace Falzoni.Presentation.Administrator
 
             bundles.Add(new StyleBundle("~/bundles/admin-lte").Include(
                 "~/Content/libraries/admin-lte/AdminLTE.css",
+                "~/Content/libraries/admin-lte/skins/_all-skins.css",
                 "~/Content/libraries/icheck/skins/square/_all.css",
                 "~/Content/libraries/font-awesome.css"));
 

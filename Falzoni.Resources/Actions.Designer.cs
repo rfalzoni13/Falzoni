@@ -68,5 +68,14 @@ namespace Falzoni.Resources {
                 return ResourceManager.GetString("Enter", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Enviar.
+        /// </summary>
+        public static string Send {
+            get {
+                return ResourceManager.GetString("Send", resourceCulture);
+            }
+        }
     }
 }
